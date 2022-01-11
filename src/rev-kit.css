@@ -1,3 +1,4 @@
 @import './assets/css/variables.css';
 @import './components/button/Button.module.css';
 @import './components/tag/Tag.module.css';
+@import './components/alert/Alert.module.css';

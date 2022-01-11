@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web';
 import App from './App';
-import './rev-kit.css';
+import './app.css';
 
 render(() => <App />, document.getElementById('root'));
