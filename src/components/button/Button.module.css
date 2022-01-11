@@ -1,0 +1,70 @@
+.rev-btn {
+  background: var(--rev-accent);
+  box-sizing: border-box;
+  border: unset;
+  border-radius: 3px;
+  height: 48px;
+  padding: 4px 20px;
+  font-size: 14px;
+  color: var(--rev-bright);
+  margin: 4px;
+  min-width: 100px;
+}
+
+.rev-btn-secondary {
+  background: var(--rev-bright);
+  color: var(--rev-accent);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.rev-btn-ghost {
+  background: var(--rev-bright);
+  color: var(--rev-muted);
+  border: 2px solid var(--rev-muted);
+  box-shadow: unset;
+}
+
+.rev-btn-small {
+  height: 34px;
+}
+
+.rev-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.rev-btn-ghost:hover {
+  color: var(--rev-accent);
+  border-color: var(--rev-accent);
+  box-shadow: unset;
+}
+
+.rev-btn:active {
+  border: 2px solid var(--rev-primary);
+  box-shadow: unset;
+}
+
+.rev-btn-secondary:active {
+  border: 2px solid var(--rev-accent);
+  box-shadow: unset;
+}
+
+.rev-btn-ghost:active {
+  color: var(--rev-secondary);
+  border-color: var(--rev-secondary);
+}
+
+.rev-btn:disabled {
+  background: var(--rev-shade);
+  color: rgba(44, 39, 56, 0.24);
+  box-shadow: unset;
+}
+
+.rev-btn:disabled:hover {
+  box-shadow: unset;
+}
+
+.rev-btn-ghost:disabled {
+  background: transparent;
+  color: rgba(44, 39, 56, 0.24);
+  border-color: rgba(44, 39, 56, 0.24);
+}

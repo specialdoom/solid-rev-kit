@@ -1,0 +1,51 @@
+.rev-tag {
+  display: inline-flex;
+  font-size: 14px;
+  padding: 0 15px 0 19px;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 50px;
+  background: var(--rev-bright);
+  color: var(--rev-muted);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 17px;
+  margin: 4px;
+}
+
+.rev-tag-dark {
+  background: var(--rev-primary);
+  color: var(--rev-bright);
+  box-shadow: unset;
+}
+
+.rev-tag-success {
+  background: var(--rev-success);
+  color: var(--rev-bright);
+  box-shadow: unset;
+}
+
+.rev-tag-warning {
+  background: var(--rev-warning);
+  color: var(--rev-bright);
+  box-shadow: unset;
+}
+
+.rev-tag-accent {
+  background: var(--rev-accent);
+  color: var(--rev-bright);
+  box-shadow: unset;
+}
+
+.rev-tag-error {
+  background: var(--rev-error);
+  color: var(--rev-bright);
+  box-shadow: unset;
+}
+
+.rev-tag-icon {
+  padding: 5px 0 0 8px;
+}
+
+.rev-tag-icon svg {
+  cursor: pointer;
+}
