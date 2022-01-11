@@ -1,0 +1,12 @@
+:root {
+  --rev-accent: #0880ae;
+  --rev-warning: #f2ac57;
+  --rev-success: #14a38b;
+  --rev-error: #ff7171;
+  --rev-primary: #2c2738;
+  --rev-secondary: #756f86;
+  --rev-muted: #7c9cbf;
+  --rev-bright: #ffffff;
+  --rev-shade: #dbe2ea;
+  --rev-tint: #ebf4f8;
+}
