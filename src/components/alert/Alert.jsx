@@ -40,10 +40,8 @@ export function Alert(props) {
 			<div
 				className={`rev-alert ${getClassNameByTagType(props.type)}`}
 			>
-				<span>{props.children}</span>
-				<span onClick={() => setClosed(true)}>
-					<CloseIcon scale={24} color={getIconColorByTagType(props.type)} />
-				</span>
+				{props.children}
+				<CloseIcon scale={24} color={getIconColorByTagType(props.type)} onClick={() => setClosed(true)} />
 			</div>
 		</Show >
 	)

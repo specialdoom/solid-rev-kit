@@ -11,7 +11,7 @@
   min-width: 100px;
 }
 
-.rev-btn-secondary {
+.rev-btn-bright {
   background: var(--rev-bright);
   color: var(--rev-accent);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -43,7 +43,7 @@
   box-shadow: unset;
 }
 
-.rev-btn-secondary:active {
+.rev-btn-bright:active {
   border: 2px solid var(--rev-accent);
   box-shadow: unset;
 }

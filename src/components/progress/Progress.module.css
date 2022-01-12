@@ -1,0 +1,26 @@
+.rev-progress {
+  width: 100%;
+  height: 8px;
+  background: var(--rev-shade);
+  margin: 4px;
+}
+
+.rev-progress-percent {
+  height: 8px;
+}
+
+.rev-progress-percent.accent {
+  background: var(--rev-accent);
+}
+
+.rev-progress-percent.error {
+  background: var(--rev-error);
+}
+
+.rev-progress-percent.success {
+  background: var(--rev-success);
+}
+
+.rev-progress-percent.warning {
+  background: var(--rev-warning);
+}

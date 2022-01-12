@@ -4,7 +4,7 @@ export function Button(props) {
 			className={`rev-btn`}
 			classList={{
 				'rev-btn-small': props.small,
-				'rev-btn-secondary': props.secondary,
+				'rev-btn-bright': props.bright,
 				'rev-btn-ghost': props.ghost
 			}}
 			onClick={props.onClick}
