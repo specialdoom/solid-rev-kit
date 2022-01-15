@@ -3,11 +3,13 @@ import { Button } from './components/button/Button';
 import { Progress } from './components/progress/Progress';
 import { Spinner } from './components/spinner/Spinner';
 import { Tag } from './components/tag/Tag';
+import { Nav } from './components/nav';
+import { Logo } from './assets/Logo';
 
 function App() {
   return (
-    <div style={{ width: '800px' }}>
-      <Alert>A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
+    <div>
+      {/* <Alert>A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
       <Alert type="success">A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
       <Alert type="accent">A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
       <Alert type="warning">A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
@@ -33,8 +35,25 @@ function App() {
       <Spinner type="accent" />
       <Spinner type="error" />
       <Spinner type="warning" />
-      <Spinner type="success" />
+      <Spinner type="success" /> */}
 
+      {/* <br /> */}
+      <Nav>
+        <Nav.NavItem>
+          <Logo />
+        </Nav.NavItem>
+        <Nav.NavItem>
+          Item 1
+        </Nav.NavItem>
+        <Nav.NavItem>
+          Item 2
+        </Nav.NavItem>
+        <Nav.NavItem right>
+          <Button small>
+            Action
+          </Button>
+        </Nav.NavItem>
+      </Nav>
     </div>
   );
 }

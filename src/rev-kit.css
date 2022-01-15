@@ -1,6 +1,10 @@
+/* variables */
 @import './assets/css/variables.css';
+
+/* components */
 @import './components/button/Button.module.css';
 @import './components/tag/Tag.module.css';
 @import './components/alert/Alert.module.css';
 @import './components/progress/Progress.module.css';
 @import './components/spinner/Spinner.module.css';
+@import './components/nav/Nav.module.css';

@@ -9,7 +9,6 @@
   color: var(--rev-muted);
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 17px;
-  margin: 4px;
 }
 
 .rev-tag-dark {
