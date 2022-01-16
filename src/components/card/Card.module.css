@@ -1,0 +1,38 @@
+.rev-card {
+  height: auto;
+  max-height: 400px;
+  width: 300px;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 24px;
+}
+
+.rev-card-image {
+  height: 200px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.rev-card-title {
+  height: auto;
+  font-weight: bold;
+  font-size: 28px;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+.rev-card-body {
+  height: auto;
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+.rev-card-actions {
+  padding: 8px 0;
+  height: auto;
+  font-size: 14px;
+}

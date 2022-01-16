@@ -4,7 +4,7 @@ import { NavItem } from './NavItem';
 
 export function FlexContainer(props) {
 	return (
-		<div style={{ display: 'inline-flex', "justify-content": 'center', "align-items": 'center' }}>
+		<div style={{ display: 'inline-flex', "justify-content": 'center', "align-items": 'center', 'min-height': '62px' }}>
 			{props.children}
 		</div>
 	)

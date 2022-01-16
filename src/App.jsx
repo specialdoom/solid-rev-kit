@@ -5,6 +5,7 @@ import { Spinner } from './components/spinner/Spinner';
 import { Tag } from './components/tag/Tag';
 import { Nav } from './components/nav';
 import { Logo } from './assets/Logo';
+import { Card } from './components/card/Card';
 
 function App() {
   return (
@@ -54,7 +55,18 @@ function App() {
           </Button>
         </Nav.NavItem>
       </Nav>
-    </div>
+      <Card
+        imageSrc="https://i.ibb.co/1TTZgJ6/bg.png"
+        title="Card title"
+        body="Supporting description for the card goes here like a breeze."
+        actions={[<Button ghost>Action</Button>]}
+      />
+      <Card
+        title="Card title"
+        body="Supporting description for the card goes here like a breeze."
+        actions={[<Button ghost>Action</Button>]}
+      />
+    </div >
   );
 }
 

@@ -1,3 +1,5 @@
+import { FlexContainer } from './Nav';
+
 export function NavItem(props) {
 	return (
 		<li
@@ -8,7 +10,9 @@ export function NavItem(props) {
 			}}
 			onClick={props.onClick}
 		>
-			{props.children}
+			<FlexContainer>
+				{props.children}
+			</FlexContainer>
 		</li>
 	);
 };
