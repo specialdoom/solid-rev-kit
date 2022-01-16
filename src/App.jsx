@@ -102,8 +102,9 @@ function App() {
       <Paragraph>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ab architecto voluptatibus! Vero quae, quam doloremque, molestiae laudantium maxime mollitia pariatur, eveniet officia porro impedit placeat nesciunt earum? Facilis, dignissimos.</Paragraph>
       <Paragraph small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ab architecto voluptatibus! Vero quae, quam doloremque, molestiae laudantium maxime mollitia pariatur, eveniet officia porro impedit placeat nesciunt earum? Facilis, dignissimos.</Paragraph>
       <Label>Label</Label> */}
-      <Avatar default />
-      <Avatar initials="SD" />
+      {/* <Avatar default />
+      <Avatar initials="SD" /> */}
+      <Counter />
     </div >
   );
 }

@@ -12,7 +12,7 @@
   padding: 0;
   width: 60px;
   text-align: center;
-  border: 1px solid var(--rev-shade);
+  border: unset;
   font-size: 16px;
   outline: unset;
 }
@@ -20,6 +20,7 @@
 .rev-counter-plus {
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
+  border-left: 1px solid var(--rev-primary);
 }
 
 .rev-counter-minus {
