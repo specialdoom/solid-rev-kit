@@ -6,8 +6,12 @@ import { Tag } from './components/tag/Tag';
 import { Nav } from './components/nav';
 import { Logo } from './assets/Logo';
 import { Card } from './components/card/Card';
+import { Space } from './components/space/Space';
+import { Modal } from './components/modal/Modal';
+import { createSignal } from 'solid-js';
 
 function App() {
+  const [getIsModalVisible, setIsModalVisible] = createSignal(false);
   return (
     <div>
       {/* <Alert>A dark alert flash for bright backgrounds, which never lose the contrast.</Alert>
@@ -55,17 +59,34 @@ function App() {
           </Button>
         </Nav.NavItem>
       </Nav>
-      <Card
-        imageSrc="https://i.ibb.co/1TTZgJ6/bg.png"
-        title="Card title"
-        body="Supporting description for the card goes here like a breeze."
-        actions={[<Button ghost>Action</Button>]}
-      />
-      <Card
-        title="Card title"
-        body="Supporting description for the card goes here like a breeze."
-        actions={[<Button ghost>Action</Button>]}
-      />
+      {/* <Space>
+        <Card
+          imageSrc="https://i.ibb.co/1TTZgJ6/bg.png"
+          title="Card title"
+          body="Supporting description for the card goes here like a breeze."
+          actions={[<Button ghost>Action</Button>]}
+        />
+      </Space>
+      <Space>
+        <Card
+          title="Card title"
+          body="Supporting description for the card goes here like a breeze."
+          actions={[<Button ghost>Action</Button>]}
+        />
+      </Space> */}
+      <Button onClick={() => setIsModalVisible(true)}>
+        Show modal
+      </Button>
+      <Modal
+        title="Modal title"
+        visible={getIsModalVisible()}
+        onOk={() => setIsModalVisible(false)}
+        onCancel={() => setIsModalVisible(false)}
+      >
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+        <p>Some contents...</p>
+      </Modal>
     </div >
   );
 }

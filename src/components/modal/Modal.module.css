@@ -1,0 +1,56 @@
+.rev-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  overflow: auto;
+  outline: 0;
+}
+
+.rev-modal-dialog {
+  box-sizing: border-box;
+  background: var(--rev-bright);
+  color: var(--rev-primary);
+  font-size: 14px;
+  line-height: 1.5;
+  position: relative;
+  top: 100px;
+  z-index: 6;
+  max-width: 500px;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 16px 24px;
+}
+
+.rev-modal-header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.rev-modal-header svg {
+  cursor: pointer;
+}
+
+.rev-modal-title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.rev-modal-body {
+  padding: 8px 0;
+}
+
+.rev-modal-actions {
+  width: 100%;
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 0;
+}
