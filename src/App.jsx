@@ -9,6 +9,7 @@ import { Card } from './components/card/Card';
 import { Space } from './components/space/Space';
 import { Modal } from './components/modal/Modal';
 import { createSignal } from 'solid-js';
+import { Counter } from './components/counter/Counter';
 
 function App() {
   const [getIsModalVisible, setIsModalVisible] = createSignal(false);
@@ -87,6 +88,7 @@ function App() {
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Modal>
+      <Counter />
     </div >
   );
 }
