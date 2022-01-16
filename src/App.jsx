@@ -10,6 +10,9 @@ import { Space } from './components/space/Space';
 import { Modal } from './components/modal/Modal';
 import { createSignal } from 'solid-js';
 import { Counter } from './components/counter/Counter';
+import { Heading } from './components/typography/Heading';
+import { Paragraph } from './components/typography/Paragraph';
+import { Label } from './components/typography/Label';
 
 function App() {
   const [getIsModalVisible, setIsModalVisible] = createSignal(false);
@@ -75,7 +78,7 @@ function App() {
           actions={[<Button ghost>Action</Button>]}
         />
       </Space> */}
-      <Button onClick={() => setIsModalVisible(true)}>
+      {/* <Button onClick={() => setIsModalVisible(true)}>
         Show modal
       </Button>
       <Modal
@@ -88,7 +91,16 @@ function App() {
         <p>Some contents...</p>
         <p>Some contents...</p>
       </Modal>
-      <Counter />
+      <Heading level={1}>Heading x1</Heading>
+      <Heading level={2}>Heading x2</Heading>
+      <Heading level={3}>Heading x3</Heading>
+      <Heading level={4}>Heading x4</Heading>
+      <Heading level={5}>Heading x5</Heading>
+      <Heading level={6}>Heading x6</Heading>
+
+      <Paragraph>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ab architecto voluptatibus! Vero quae, quam doloremque, molestiae laudantium maxime mollitia pariatur, eveniet officia porro impedit placeat nesciunt earum? Facilis, dignissimos.</Paragraph>
+      <Paragraph small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ab architecto voluptatibus! Vero quae, quam doloremque, molestiae laudantium maxime mollitia pariatur, eveniet officia porro impedit placeat nesciunt earum? Facilis, dignissimos.</Paragraph>
+      <Label>Label</Label> */}
     </div >
   );
 }
