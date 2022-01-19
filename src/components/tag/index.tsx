@@ -1,4 +1,4 @@
-import { Tag, TagProps, TagType } from './Tag';
+import { Tag, TagProps } from './Tag';
 
 export { Tag };
-export type { TagProps, TagType };
+export type { TagProps };

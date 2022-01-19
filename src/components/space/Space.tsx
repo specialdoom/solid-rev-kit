@@ -1,7 +1,9 @@
 import { Component } from 'solid-js';
+import { styled } from 'solid-styled-components';
 
-export const Space: Component = ({ children }) => (
-	<div className="rev-space">
-		{children}
-	</div>
-);
+const StyledSpace = styled('div')`
+	display: inline-flex;
+  gap: 8px;
+`;
+
+export const Space: Component = ({ children }) => <StyledSpace>{children}</StyledSpace>;

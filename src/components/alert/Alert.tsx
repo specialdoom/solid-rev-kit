@@ -1,54 +1,51 @@
 import { Component, createSignal, Show } from 'solid-js';
+import { styled } from 'solid-styled-components';
 import { CloseIcon } from '../icons/close'
-
-export type AlertType = 'bright' | 'dark' | 'success' | 'warning' | 'error' | 'accent';
+import { Colors, theme } from '../themeProvider/theme';
+import { Paragraph } from '../typography';
 
 export interface AlertProps {
-	type?: AlertType;
+	type?: keyof Colors;
+	textColor?: keyof Colors;
+	iconColor?: keyof Colors;
 }
 
-const iconColorTagTypeMap: any = {
-	['bright']: '#7C9CBF',
-	['dark']: '#FFFFFF',
-	['success']: '#FFFFFF',
-	['warning']: '#FFFFFF',
-	['error']: '#FFFFFF',
-	['accent']: '#FFFFFF'
-}
+const StyledAlert = styled("div") <{
+	type: keyof Colors;
+	textColor: keyof Colors;
+}>`
+	background-color: ${(props) => props.theme.colors[props.type]};
+	box-sizing: border-box;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 24px;
+  border-radius: 10px;
+	color: ${props => props.theme.colors[props.textColor]};
+  font-weight: 400;
 
-const types = ['dark', 'success', 'error', 'accent', 'warning'];
+	& svg {
+		cursor: pointer;
+	}
+`;
 
-const classNameTagType: any = {
-	['dark']: 'rev-alert-dark',
-	['success']: 'rev-alert-success',
-	['accent']: 'rev-alert-accent',
-	['warning']: 'rev-alert-warning',
-	['error']: 'rev-alert-error'
-}
-
-const getClassNameByTagType = (tagType: AlertType) => {
-	if (!tagType || !types.includes(tagType)) return '';
-
-	return classNameTagType[tagType];
-}
-
-const getIconColorByTagType = (tagType: AlertType) => {
-	if (!tagType || !types.includes(tagType)) return iconColorTagTypeMap['bright'];
-
-	return iconColorTagTypeMap[tagType];
-}
-
-export const Alert: Component<AlertProps> = ({ type = 'bright', children }) => {
+// TO DO: use paragraph for alert text
+export const Alert: Component<AlertProps> = ({
+	type = 'bright',
+	textColor = 'bright',
+	iconColor = 'bright',
+	children
+}) => {
 	const [getClosed, setClosed] = createSignal(false)
 
 	return (
 		<Show when={!getClosed()}>
-			<div
-				className={`rev-alert ${getClassNameByTagType(type)}`}
-			>
-				{children}
-				<CloseIcon scale={24} color={getIconColorByTagType(type)} onClick={() => setClosed(true)} />
-			</div>
+			<StyledAlert type={type} textColor={textColor} >
+				<Paragraph type={textColor}>{children}</Paragraph>
+				<CloseIcon scale={24} color={theme.colors[iconColor]} onClick={() => setClosed(true)} />
+			</StyledAlert>
 		</Show >
 	)
 }

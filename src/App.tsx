@@ -1,11 +1,15 @@
 import { createSignal } from 'solid-js';
-import { Alert } from './components/alert';
+import { Space } from './components/space';
+import { Tag } from './components/tag';
 
 function App() {
   const [getIsModalVisible, setIsModalVisible] = createSignal(false);
   return (
     <div>
-      <Alert type="accent">Test</Alert>
+      <Space>
+        <Tag>Test</Tag>
+        <Tag>Test</Tag>
+      </Space>
     </div >
   );
 }

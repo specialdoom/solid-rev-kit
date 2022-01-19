@@ -1,18 +1,44 @@
 import { Component } from 'solid-js'
+import { styled } from 'solid-styled-components';
+import { Colors } from '../themeProvider/theme';
 
 export interface HeadingProps {
-	level: number;
+	size: 1 | 2 | 3 | 4 | 5 | 6;
+	weight: 'normal' | 'bold';
+	type: keyof Colors;
 }
 
-export const Heading: Component<HeadingProps> = ({ level, children }) => {
-	return (
-		<h1
-			className='rev-heading'
-			classList={{
-				[`rev-heading-level-${level}`]: true
-			}}
-		>
-			{children}
-		</h1>
-	)
+const calculateFontSize = (size: number): string => {
+	switch (size) {
+		case 1:
+			return '72px'
+		case 2:
+			return '64px'
+		case 3:
+			return '56px'
+		case 4:
+			return '34px'
+		case 5:
+			return '28px'
+		case 6:
+			return '20px'
+		default:
+			return '20px'
+	}
 }
+
+const StyledHeading = styled("h1") <HeadingProps>`
+	font-size: ${props => calculateFontSize(props.size)};
+	font-weight: ${(props) => props.weight};
+  color: ${(props) => props.theme.colors[props.type]};
+`;
+
+export const Heading: Component<HeadingProps> = ({ size, type, weight, children }) => (
+	<StyledHeading
+		size={size}
+		weight={weight}
+		type={type}
+	>
+		{children}
+	</StyledHeading>
+);
