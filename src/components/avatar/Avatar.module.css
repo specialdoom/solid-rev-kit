@@ -6,5 +6,6 @@
   justify-content: center;
   align-items: center;
   font-size: 16px;
+  background: var(--rev-muted);
   color: var(--rev-bright);
 }
