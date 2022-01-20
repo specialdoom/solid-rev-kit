@@ -3,9 +3,9 @@ import { styled } from 'solid-styled-components';
 import { Colors } from '../themeProvider/theme';
 
 export interface HeadingProps {
-	size: 1 | 2 | 3 | 4 | 5 | 6;
-	weight: 'normal' | 'bold';
-	type: keyof Colors;
+	size?: 1 | 2 | 3 | 4 | 5 | 6;
+	weight?: 'normal' | 'bold';
+	type?: keyof Colors;
 }
 
 const calculateFontSize = (size: number): string => {
@@ -27,13 +27,18 @@ const calculateFontSize = (size: number): string => {
 	}
 }
 
-const StyledHeading = styled("h1") <HeadingProps>`
+const StyledHeading = styled("h1") <{
+	size: 1 | 2 | 3 | 4 | 5 | 6;
+	weight: 'normal' | 'bold';
+	type: keyof Colors;
+}>`
 	font-size: ${props => calculateFontSize(props.size)};
 	font-weight: ${(props) => props.weight};
   color: ${(props) => props.theme.colors[props.type]};
+	padding: 8px 0;
 `;
 
-export const Heading: Component<HeadingProps> = ({ size, type, weight, children }) => (
+export const Heading: Component<HeadingProps> = ({ size = 1, type = 'primary', weight = 'normal', children }) => (
 	<StyledHeading
 		size={size}
 		weight={weight}
