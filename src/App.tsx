@@ -1,19 +1,10 @@
-import { createSignal } from 'solid-js';
-import { Button } from './components/button';
+import { Alert } from './components/alert';
 
 function App() {
-  const [getIsModalVisible, setIsModalVisible] = createSignal(true);
   return (
     <div>
-      <Button>Test</Button>
-      <Button variant='bright'>Test</Button>
-      <Button variant='ghost'>Test</Button>
-      <Button small>Test</Button>
-      <Button variant='bright' small>Test</Button>
-      <Button variant='ghost' small>Test</Button>
-      <Button disabled>Test</Button>
-      <Button variant='bright' disabled>Test</Button>
-      <Button variant='ghost' disabled>Test</Button>
+      <Alert textColor='primary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quam quas earum incidunt sapiente illum id sit ea at, facilis officiis, non voluptate. Veritatis excepturi, odio nesciunt culpa assumenda perspiciatis.</Alert>
+      <Alert textColor='primary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</Alert>
     </div >
   );
 }

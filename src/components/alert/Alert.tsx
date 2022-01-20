@@ -1,6 +1,7 @@
 import { Component, createSignal, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { CloseIcon } from '../icons/close'
+import { Space } from '../space';
 import { Colors, theme } from '../themeProvider/theme';
 import { Paragraph } from '../typography';
 
@@ -25,10 +26,16 @@ const StyledAlert = styled("div") <{
   border-radius: 10px;
 	color: ${props => props.theme.colors[props.textColor]};
   font-weight: 400;
+	gap: 8px;
 
 	& svg {
 		cursor: pointer;
 	}
+`;
+
+const IconContainer = styled('span')`
+	height: 20px;
+	width: 20px;
 `;
 
 // TO DO: use paragraph for alert text
@@ -44,7 +51,7 @@ export const Alert: Component<AlertProps> = ({
 		<Show when={!getClosed()}>
 			<StyledAlert type={type} textColor={textColor} >
 				<Paragraph type={textColor}>{children}</Paragraph>
-				<CloseIcon scale={24} color={theme.colors[iconColor]} onClick={() => setClosed(true)} />
+				<IconContainer><CloseIcon /></IconContainer>
 			</StyledAlert>
 		</Show >
 	)
