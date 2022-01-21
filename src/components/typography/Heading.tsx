@@ -35,7 +35,6 @@ const StyledHeading = styled("h1") <{
 	font-size: ${props => calculateFontSize(props.size)};
 	font-weight: ${(props) => props.weight};
   color: ${(props) => props.theme.colors[props.type]};
-	padding: 8px 0;
 `;
 
 export const Heading: Component<HeadingProps> = ({ size = 1, type = 'primary', weight = 'normal', children }) => (

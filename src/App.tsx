@@ -1,10 +1,26 @@
 import { Alert } from './components/alert';
+import { Button } from './components/button';
+import { Callout } from './components/callout';
 
 function App() {
   return (
     <div>
-      <Alert textColor='primary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt quam quas earum incidunt sapiente illum id sit ea at, facilis officiis, non voluptate. Veritatis excepturi, odio nesciunt culpa assumenda perspiciatis.</Alert>
-      <Alert textColor='primary'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</Alert>
+      <Callout
+        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit'
+        actions={[
+          <Button small>Action</Button>,
+          <Button variant="ghost" small>Cancel</Button>
+        ]}
+        small
+      />
+      <Callout
+        title='Callout title'
+        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        actions={[
+          <Button small>Action</Button>,
+          <Button variant="ghost" small>Cancel</Button>
+        ]}
+      />
     </div >
   );
 }

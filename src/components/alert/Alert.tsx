@@ -1,7 +1,6 @@
 import { Component, createSignal, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { CloseIcon } from '../icons/close'
-import { Space } from '../space';
 import { Colors, theme } from '../themeProvider/theme';
 import { Paragraph } from '../typography';
 
@@ -51,7 +50,9 @@ export const Alert: Component<AlertProps> = ({
 		<Show when={!getClosed()}>
 			<StyledAlert type={type} textColor={textColor} >
 				<Paragraph type={textColor}>{children}</Paragraph>
-				<IconContainer><CloseIcon /></IconContainer>
+				<IconContainer>
+					<CloseIcon />
+				</IconContainer>
 			</StyledAlert>
 		</Show >
 	)
