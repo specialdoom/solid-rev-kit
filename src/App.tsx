@@ -1,14 +1,14 @@
 import { Alert } from './components/alert';
-import { Avatar } from './components/avatar';
+import { render } from 'solid-js/web';
+import './app.css';
+import { RevKitTheme } from './components/themeProvider/ThemeProvider';
 
 function App() {
   return (
     <div>
-      <Alert type='accent'>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </Alert>
+      <Alert>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Alert>
     </div >
   );
 }
 
-export default App;
+render(() => <RevKitTheme><App /></RevKitTheme>, document.getElementById('root') as HTMLElement);
