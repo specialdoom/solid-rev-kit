@@ -1,9 +1,9 @@
-import { CloseIcon } from '../icons/close';
 import { Button } from '../button/Button';
 import { Space } from '../space/Space';
 import { Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Heading } from '../typography';
+import { Cross } from '../icons';
 
 export interface ModalProps {
 	visible: boolean;
@@ -58,26 +58,24 @@ const ModalActions = styled('div')`
   align-items: center;
 `;
 
-export const Modal: Component<ModalProps> = ({ visible, title, onOk, onCancel, children }) => {
-	return (
-		<Show when={visible}>
-			<ModalWrap>
-				<ModalDialog>
-					<ModalHeader>
-						<Heading size={5} weight='bold'>{title}</Heading>
-						<CloseIcon />
-					</ModalHeader>
-					<ModalBody>
-						{children}
-					</ModalBody>
-					<ModalActions>
-						<Space>
-							<Button ghost onClick={onCancel}>Cancel</Button>
-							<Button onClick={onOk}>Action</Button>
-						</Space>
-					</ModalActions>
-				</ModalDialog>
-			</ModalWrap>
-		</Show>
-	)
-}
+export const Modal: Component<ModalProps> = ({ visible, title, onOk, onCancel, children }) => (
+	<Show when={visible}>
+		<ModalWrap>
+			<ModalDialog>
+				<ModalHeader>
+					<Heading size={5} weight='bold'>{title}</Heading>
+					<Cross onClick={onCancel} />
+				</ModalHeader>
+				<ModalBody>
+					{children}
+				</ModalBody>
+				<ModalActions>
+					<Space>
+						<Button variant="ghost" onClick={onCancel}>Cancel</Button>
+						<Button onClick={onOk}>Action</Button>
+					</Space>
+				</ModalActions>
+			</ModalDialog>
+		</ModalWrap>
+	</Show >
+);

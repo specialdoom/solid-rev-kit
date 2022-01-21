@@ -1,26 +1,12 @@
 import { Alert } from './components/alert';
-import { Button } from './components/button';
-import { Callout } from './components/callout';
+import { Avatar } from './components/avatar';
 
 function App() {
   return (
     <div>
-      <Callout
-        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit'
-        actions={[
-          <Button small>Action</Button>,
-          <Button variant="ghost" small>Cancel</Button>
-        ]}
-        small
-      />
-      <Callout
-        title='Callout title'
-        text='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
-        actions={[
-          <Button small>Action</Button>,
-          <Button variant="ghost" small>Cancel</Button>
-        ]}
-      />
+      <Alert type='accent'>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      </Alert>
     </div >
   );
 }
