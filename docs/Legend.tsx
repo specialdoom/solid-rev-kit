@@ -1,7 +1,7 @@
 import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components'
-import { Space } from '../src/components/space';
-import { Heading } from '../src/components/typography';
+import { Space } from '../components/space';
+import { Heading } from '../components/typography';
 
 interface LegendProps {
 	title: string;

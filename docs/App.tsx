@@ -1,8 +1,8 @@
 import { render } from 'solid-js/web';
-import { RevKitTheme } from '../src';
+import { RevKitTheme } from '..';
 import { Container } from './Container';
 import { Legend } from './Legend';
-import branding from '../src/assets/images/branding.svg';
+import branding from '../assets/images/branding.svg';
 
 const App = () => (
   <div>

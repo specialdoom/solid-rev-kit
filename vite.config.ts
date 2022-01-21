@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [solidPlugin()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/index.tsx'),
+      entry: path.resolve(__dirname, 'index.tsx'),
       name: 'solid-rev-kit',
       fileName: (format) => `solid-rev-kit.${format}.js`
     },

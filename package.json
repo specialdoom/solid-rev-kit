@@ -2,7 +2,7 @@
   "name": "solid-rev-kit",
   "version": "0.0.0",
   "description": "revKit UI for solid js",
-  "main": "src/index.tsx",
+  "main": "index.tsx",
   "scripts": {
     "start": "vite",
     "dev": "vite",
