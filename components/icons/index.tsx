@@ -6,6 +6,9 @@ export type { IconProps };
 const Icon = styled('span')`
 	height: 20px;
 	width: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Plus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Plus fill={fill} /></Icon>;

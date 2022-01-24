@@ -1,4 +1,5 @@
 import { Card, CardProps } from './Card';
+import { ColorCard, ColorCardProps } from './ColorCard';
 
-export { Card };
-export type { CardProps };
+export { Card, ColorCard };
+export type { CardProps, ColorCardProps };
