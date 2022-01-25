@@ -6,7 +6,7 @@ type ButtonType = 'bright' | 'ghost' | 'accent';
 export interface ButtonProps {
 	variant?: ButtonType;
 	small?: boolean;
-	onClick?: (e: Event) => void;
+	onClick?: any;
 	disabled?: boolean;
 }
 

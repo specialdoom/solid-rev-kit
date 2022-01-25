@@ -10,8 +10,7 @@ export interface CardProps {
 }
 
 const StyledCard = styled('div')`
-	height: auto;
-	min-height: 240px;
+	height: fit-content;
   width: 300px;
   padding: 16px;
   box-sizing: border-box;
@@ -20,10 +19,14 @@ const StyledCard = styled('div')`
   justify-content: flex-start;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 24px;
+	background: ${props => props.theme.colors.bright};
+	gap: 8px;
 `;
 
-const Image = styled('img')`
+const Image = styled('div') <{ src?: string }>`
 	height: 200px;
+	background: ${props => props.src ? `url(${props.src})` : 'unset'};
+	background-size: cover;
   border-radius: 16px;
   width: 100%;
 `;

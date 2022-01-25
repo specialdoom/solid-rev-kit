@@ -14,6 +14,7 @@ const StyledSmallCallout = styled("div")`
 	height: 80%;
 	display: inline-flex;
 	justify-content: space-between;
+	align-items: center;
 	background: ${props => props.theme.colors.bright};
 	color: ${props => props.theme.colors.primary};
 	padding: 24px 20px;

@@ -35,7 +35,7 @@ const StyledAlert = styled("div") <{
 export const Alert: Component<AlertProps> = ({
 	type = 'bright',
 	textColor = 'bright',
-	iconColor = '#2c2738',
+	iconColor = '#ffffff',
 	children
 }) => {
 	const [getClosed, setClosed] = createSignal(false)
