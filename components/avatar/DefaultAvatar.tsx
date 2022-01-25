@@ -1,11 +1,11 @@
-import { styled } from 'solid-styled-components'
+import { styled } from 'solid-styled-components';
 
 export interface DefaultProps {
 	type?: 'steven' | 'meg' | 'mike' | 'mili';
 	round?: boolean;
 }
 
-const getImageUrl = (type: 'steven' | 'meg' | 'mike' | 'mili') => `https://storage.googleapis.com/rev-kit-assets/${type}.png`
+const getImageUrl = (type: 'steven' | 'meg' | 'mike' | 'mili') => `https://storage.googleapis.com/rev-kit-assets/${type}.png`;
 
 const StyledAvatar = styled('div') <{
 	type: 'steven' | 'meg' | 'mike' | 'mili',

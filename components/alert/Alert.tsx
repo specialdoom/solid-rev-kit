@@ -10,7 +10,7 @@ export interface AlertProps {
 	iconColor?: string;
 }
 
-const StyledAlert = styled("div") <{
+const StyledAlert = styled('div') <{
 	type: keyof Colors;
 	textColor: keyof Colors;
 }>`
@@ -38,7 +38,7 @@ export const Alert: Component<AlertProps> = ({
 	iconColor = '#ffffff',
 	children
 }) => {
-	const [getClosed, setClosed] = createSignal(false)
+	const [getClosed, setClosed] = createSignal(false);
 
 	return (
 		<Show when={!getClosed()}>
@@ -47,5 +47,5 @@ export const Alert: Component<AlertProps> = ({
 				<Cross fill={iconColor} onClick={() => setClosed(true)} />
 			</StyledAlert>
 		</Show >
-	)
-}
+	);
+};

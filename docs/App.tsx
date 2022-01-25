@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web';
-import { Button, RevKitTheme } from '..';
+import { RevKitTheme } from '..';
 import { Container } from './Container';
 import { Legend } from './Legend';
 import branding from '../assets/images/branding.svg';
@@ -39,7 +39,7 @@ const App = () => {
       <Legend title="Callouts" rank={9} />
       <CalloutsSection />
     </div>
-  )
+  );
 };
 
 render(() => <RevKitTheme><App /></RevKitTheme>, document.getElementById('root') as HTMLElement);

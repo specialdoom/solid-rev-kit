@@ -1,4 +1,4 @@
-import { Component } from 'solid-js'
+import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../themeProvider/theme';
 
@@ -11,23 +11,23 @@ export interface HeadingProps {
 const calculateFontSize = (size: number): string => {
 	switch (size) {
 		case 1:
-			return '72px'
+			return '72px';
 		case 2:
-			return '64px'
+			return '64px';
 		case 3:
-			return '56px'
+			return '56px';
 		case 4:
-			return '34px'
+			return '34px';
 		case 5:
-			return '28px'
+			return '28px';
 		case 6:
-			return '20px'
+			return '20px';
 		default:
-			return '20px'
+			return '20px';
 	}
-}
+};
 
-const StyledHeading = styled("h1") <{
+const StyledHeading = styled('h1') <{
 	size: 1 | 2 | 3 | 4 | 5 | 6;
 	weight: 'normal' | 'bold';
 	type: keyof Colors;

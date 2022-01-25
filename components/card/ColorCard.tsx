@@ -25,9 +25,7 @@ const ActionsHeader = styled('div')`
 	justify-content: flex-end;
 	width: 100%;
 	height: 60%;
-`
-
-
+`;
 
 export const ColorCard: Component<ColorCardProps> = ({
 	backgroundColor = '#2C2738',

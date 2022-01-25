@@ -1,4 +1,4 @@
-import { Component, createSignal, Show } from 'solid-js';
+import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../themeProvider/theme';
 
@@ -27,17 +27,11 @@ export const Tag: Component<TagProps> = ({
 	type = 'accent',
 	textColor = 'bright',
 	children
-}) => {
-	const [getClosed, setClosed] = createSignal(false);
-
-	return (
-		<Show when={!getClosed()}>
-			<StyledTag
-				type={type}
-				textColor={textColor}
-			>
-				{children}
-			</StyledTag>
-		</Show>
-	)
-}
+}) => (
+	<StyledTag
+		type={type}
+		textColor={textColor}
+	>
+		{children}
+	</StyledTag>
+);

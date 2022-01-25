@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
 import { Alert } from '../../components/alert';
-import { Colors, theme } from '../../components/themeProvider/theme';
+import { theme } from '../../components/themeProvider/theme';
 import { Container } from '../Container';
 
 export const AlertsSection: Component = () => (

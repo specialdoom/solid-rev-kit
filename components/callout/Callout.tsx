@@ -9,7 +9,7 @@ export interface CalloutProps {
 	small?: boolean;
 }
 
-const StyledSmallCallout = styled("div")`
+const StyledSmallCallout = styled('div')`
 	width: 100%;
 	height: 80%;
 	display: inline-flex;
@@ -22,14 +22,14 @@ const StyledSmallCallout = styled("div")`
 	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 `;
 
-const ActionsContainer = styled("div") <{ small: boolean }>`
+const ActionsContainer = styled('div') <{ small: boolean }>`
 	display: inline-flex;
 	justify-content: ${props => props.small ? 'flex-end' : 'flex-start'};
 	align-items: center;
 	gap: 8px;
 `;
 
-const StyledLargeCallout = styled("div")`
+const StyledLargeCallout = styled('div')`
 	width: 100%;
 	height: auto;
 	min-height: 200px;
@@ -50,7 +50,7 @@ const SmallCallout: Component<CalloutProps> = ({ text, actions }) => (
 			<For each={actions}>{action => action}</For>
 		</ActionsContainer>
 	</StyledSmallCallout>
-)
+);
 
 export const Callout: Component<CalloutProps> = ({ title, text, actions, small = false }) => (
 	<Show when={!small}
@@ -64,4 +64,4 @@ export const Callout: Component<CalloutProps> = ({ title, text, actions, small =
 			</ActionsContainer>
 		</StyledLargeCallout>
 	</Show >
-)
+);

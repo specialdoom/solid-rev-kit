@@ -1,4 +1,4 @@
-import { Component } from 'solid-js'
+import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../themeProvider/theme';
 
@@ -11,15 +11,15 @@ export interface ParagraphProps {
 const calculateFontSize = (size: number): string => {
 	switch (size) {
 		case 1:
-			return '16px'
+			return '16px';
 		case 2:
-			return '14px'
+			return '14px';
 		default:
-			return '16px'
+			return '16px';
 	}
-}
+};
 
-const StyledParagraph = styled("p") <{
+const StyledParagraph = styled('p') <{
 	size: 1 | 2,
 	weight: 'normal' | 'bold',
 	type: keyof Colors

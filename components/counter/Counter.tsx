@@ -1,6 +1,5 @@
 import { Component, createSignal } from 'solid-js';
-import { MinusIcon } from '../icons/minus';
-import { PlusIcon } from '../icons/plus';
+import { Minus, Plus } from '../icons';
 
 export interface CounterProps {
 	onChange: (event: Event) => void;
@@ -16,7 +15,7 @@ export const Counter: Component<CounterProps> = ({ onChange, onBlur }) => {
 	return (
 		<div class="rev-counter">
 			<button className="rev-counter-minus rev-counter-control" onClick={decrease}>
-				<MinusIcon />
+				<Plus />
 			</button>
 			<input
 				type="text"
@@ -27,8 +26,8 @@ export const Counter: Component<CounterProps> = ({ onChange, onBlur }) => {
 				className="rev-counter-value"
 			/>
 			<button className="rev-counter-plus rev-counter-control" onClick={increase}>
-				<PlusIcon />
+				<Minus />
 			</button>
 		</div>
-	)
-}
+	);
+};

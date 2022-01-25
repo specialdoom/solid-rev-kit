@@ -6,7 +6,7 @@ const Avatar = Object.assign(InternalAvatar, {
 	Mike: ({ round }: DefaultProps) => <DefaultAvatar type='mike' round={round} />,
 	Mili: ({ round }: DefaultProps) => <DefaultAvatar type='mili' round={round} />,
 	Meg: ({ round }: DefaultProps) => <DefaultAvatar type='meg' round={round} />
-})
+});
 
 export { Avatar };
-export type { AvatarProps }
+export type { AvatarProps };

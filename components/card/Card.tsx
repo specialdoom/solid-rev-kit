@@ -57,5 +57,5 @@ export const Card: Component<CardProps> = ({ imageSrc, title, children, actions 
 				<For each={actions}>{(action) => action}</For>
 			</ActionsContainer>
 		</StyledCard>
-	)
-}
+	);
+};

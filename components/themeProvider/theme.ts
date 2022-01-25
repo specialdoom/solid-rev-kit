@@ -28,4 +28,4 @@ export const theme: Theme = {
 		shade: '#DBE2EA',
 		tint: '#EBF4F8'
 	}
-}
+};

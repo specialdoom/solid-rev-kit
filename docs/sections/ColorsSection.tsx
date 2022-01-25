@@ -1,8 +1,8 @@
-import { For } from 'solid-js'
+import { For } from 'solid-js';
 import { Colors } from '../../components/themeProvider/theme';
 import { Heading, Label } from '../../components/typography';
 import { ColorCard } from '../components/ColorCard';
-import { Container } from '../Container'
+import { Container } from '../Container';
 
 const colors = [
 	{

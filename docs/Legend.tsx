@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { styled } from 'solid-styled-components'
+import { styled } from 'solid-styled-components';
 import { Space } from '../components/space';
 import { Heading } from '../components/typography';
 
@@ -30,4 +30,4 @@ export const Legend: Component<LegendProps> = ({ title, rank }) => (
 			</Heading>
 		</Space>
 	</StyledLegend>
-)
+);

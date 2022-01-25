@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { styled } from 'solid-styled-components'
+import { styled } from 'solid-styled-components';
 
 interface ContainerProps {
 	type: 'full' | 'fluid'
