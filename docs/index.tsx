@@ -1,5 +1,4 @@
 import { render } from 'solid-js/web';
-import { RevKitTheme } from '../src/components/themeProvider/ThemeProvider';
 import { Container } from './src/Container';
 import { Legend } from './src/Legend';
 import branding from './src/assets/branding.svg';
@@ -12,6 +11,8 @@ import { ButtonsSection } from './src/sections/ButtonsSection';
 import { AlertsSection } from './src/sections/AlertsSection';
 import { SpinnerSection } from './src/sections/SpinnersSection';
 import { CalloutsSection } from './src/sections/CalloutsSection';
+import { ThemeProvider } from 'solid-styled-components';
+import { theme } from '../src/components/themeProvider/theme';
 
 const App = () => {
   return (
@@ -42,4 +43,4 @@ const App = () => {
   );
 };
 
-render(() => <RevKitTheme><App /></RevKitTheme>, document.getElementById('root') as HTMLElement);
+render(() => <ThemeProvider theme={theme}><App /></ThemeProvider>, document.getElementById('root') as HTMLElement);
