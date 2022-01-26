@@ -1,6 +1,6 @@
 import { Component, createSignal } from 'solid-js';
-import { Button } from '../..';
-import { Modal } from '../../components/modal';
+import { Button } from '../../..';
+import { Modal } from '../../../src/components/modal';
 import { Container } from '../Container';
 
 export const ModalsSection: Component = () => {

@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
-import { Button } from '../..';
-import { Card } from '../../components/card';
+import { Button } from '../../..';
+import { Card } from '../../../src/components/card';
 import { Container } from '../Container';
 
 export const CardsSection: Component = () => (

@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { Spinner } from '../../components/spinner';
+import { Spinner } from '../../../src/components/spinner';
 import { Container } from '../Container';
 
 export const SpinnerSection: Component = () => (

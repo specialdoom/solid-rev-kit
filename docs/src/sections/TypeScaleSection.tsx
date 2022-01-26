@@ -1,6 +1,6 @@
 import { Component, For } from 'solid-js';
-import { Colors } from '../../components/themeProvider/theme';
-import { Heading, Label, Paragraph } from '../../components/typography';
+import { Colors } from '../../../src/components/themeProvider/theme';
+import { Heading, Label, Paragraph } from '../../../src/components/typography';
 import { Container } from '../Container';
 
 const types: (keyof Colors)[] = ['primary', 'accent', 'error', 'success', 'warning', 'secondary', 'muted', 'bright'];

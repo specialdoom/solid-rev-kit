@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { Avatar } from '../../components/avatar';
+import { Avatar } from '../../../src/components/avatar';
 import { Container } from '../Container';
 
 export const AvatarsSection: Component = () => (

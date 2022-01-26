@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { Cross, More, Plus, Minus, Burger } from '../../components/icons';
+import { Cross, More, Plus, Minus, Burger } from '../../../src/components/icons';
 import { Container } from '../Container';
 
 export const IconsSection: Component = () => (

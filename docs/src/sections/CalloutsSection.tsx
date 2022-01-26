@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
-import { Button } from '../../components/button';
-import { Callout } from '../../components/callout';
+import { Button } from '../../../src/components/button';
+import { Callout } from '../../../src/components/callout';
 import { Container } from '../Container';
 
 export const CalloutsSection: Component = () => (

@@ -1,17 +1,17 @@
 import { render } from 'solid-js/web';
 import { RevKitTheme } from '..';
-import { Container } from './Container';
-import { Legend } from './Legend';
-import branding from '../assets/images/branding.svg';
-import { ColorsSection } from './sections/ColorsSection';
-import { AvatarsSection } from './sections/AvatarsSection';
-import { TypeScaleSection } from './sections/TypeScaleSection';
-import { IconsSection } from './sections/IconsSection';
-import { CardsSection } from './sections/CardsContainer';
-import { ButtonsSection } from './sections/ButtonsSection';
-import { AlertsSection } from './sections/AlertsSection';
-import { SpinnerSection } from './sections/SpinnersSection';
-import { CalloutsSection } from './sections/CalloutsSection';
+import { Container } from './src/Container';
+import { Legend } from './src/Legend';
+import branding from './src/assets/branding.svg';
+import { ColorsSection } from './src/sections/ColorsSection';
+import { AvatarsSection } from './src/sections/AvatarsSection';
+import { TypeScaleSection } from './src/sections/TypeScaleSection';
+import { IconsSection } from './src/sections/IconsSection';
+import { CardsSection } from './src/sections/CardsContainer';
+import { ButtonsSection } from './src/sections/ButtonsSection';
+import { AlertsSection } from './src/sections/AlertsSection';
+import { SpinnerSection } from './src/sections/SpinnersSection';
+import { CalloutsSection } from './src/sections/CalloutsSection';
 
 const App = () => {
   return (

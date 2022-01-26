@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Button } from '../../components/button';
+import { Button } from '../../../src/components/button';
 import { Container } from '../Container';
 
 const ButtonTypeContainer = styled('div')`
