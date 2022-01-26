@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web';
-import { RevKitTheme } from '..';
+import { RevKitTheme } from '../src/components/themeProvider/ThemeProvider';
 import { Container } from './src/Container';
 import { Legend } from './src/Legend';
 import branding from './src/assets/branding.svg';
