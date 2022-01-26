@@ -5,9 +5,12 @@ import solidPlugin from 'vite-plugin-solid';
 export default defineConfig({
 	plugins: [solidPlugin()],
 	build: {
-		outDir: 'public',
-		assetsDir: '.',
 		target: 'esnext',
+		lib: {
+      entry: path.resolve(__dirname, 'index.tsx'),
+      name: 'bundle',
+      fileName: 'bundle.js'
+    },
 		polyfillDynamicImport: false,
 	},
 });
