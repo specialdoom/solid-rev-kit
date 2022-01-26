@@ -1,18 +1,17 @@
 import { render } from 'solid-js/web';
+import { RevKitTheme } from '../src/components/themeProvider/ThemeProvider';
 import { Container } from './src/Container';
-// import { Legend } from './src/Legend';
+import { Legend } from './src/Legend';
 import branding from './src/assets/branding.svg';
-// import { ColorsSection } from './src/sections/ColorsSection';
-// import { AvatarsSection } from './src/sections/AvatarsSection';
-// import { TypeScaleSection } from './src/sections/TypeScaleSection';
-// import { IconsSection } from './src/sections/IconsSection';
-// import { CardsSection } from './src/sections/CardsContainer';
-// import { ButtonsSection } from './src/sections/ButtonsSection';
-// import { AlertsSection } from './src/sections/AlertsSection';
-// import { SpinnerSection } from './src/sections/SpinnersSection';
-// import { CalloutsSection } from './src/sections/CalloutsSection';
-import { ThemeProvider } from 'solid-styled-components';
-import { theme } from '../src/components/themeProvider/theme';
+import { ColorsSection } from './src/sections/ColorsSection';
+import { AvatarsSection } from './src/sections/AvatarsSection';
+import { TypeScaleSection } from './src/sections/TypeScaleSection';
+import { IconsSection } from './src/sections/IconsSection';
+import { CardsSection } from './src/sections/CardsContainer';
+import { ButtonsSection } from './src/sections/ButtonsSection';
+import { AlertsSection } from './src/sections/AlertsSection';
+import { SpinnerSection } from './src/sections/SpinnersSection';
+import { CalloutsSection } from './src/sections/CalloutsSection';
 
 const App = () => {
   return (
@@ -20,7 +19,7 @@ const App = () => {
       <Container type='full' padding='0'>
         <img src={branding} alt='RevkitUI' width='100%' />
       </Container>
-      {/* <Legend title="Typeface" rank={1} />
+      <Legend title="Typeface" rank={1} />
       <Legend title="Colors" rank={2} />
       <ColorsSection />
       <Legend title="Icons" rank={3} />
@@ -38,9 +37,9 @@ const App = () => {
       <Legend title="Spinners" rank={9} />
       <SpinnerSection />
       <Legend title="Callouts" rank={9} />
-      <CalloutsSection /> */}
+      <CalloutsSection />
     </div>
   );
 };
 
-render(() => <ThemeProvider theme={theme}><App /></ThemeProvider>, document.getElementById('root') as HTMLElement);
+render(() => <RevKitTheme><App /></RevKitTheme>, document.getElementById('root') as HTMLElement);
