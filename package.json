@@ -5,12 +5,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/my-lib.umd.js",
-  "module": "./dist/my-lib.es.js",
+  "main": "./dist/solid-rev-kitumd.js",
+  "module": "./dist/solid-rev-kites.js",
   "exports": {
     ".": {
-      "import": "./dist/my-lib.es.js",
-      "require": "./dist/my-lib.umd.js"
+      "import": "./dist/solid-rev-kit.es.js",
+      "require": "./dist/solid-rev-kit.umd.js"
     }
   },
   "scripts": {
