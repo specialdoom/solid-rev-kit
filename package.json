@@ -13,7 +13,6 @@
       "require": "./dist/solid-rev-kit.umd.js"
     }
   },
-  "types": "dist/index.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",
