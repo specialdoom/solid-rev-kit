@@ -1,18 +1,19 @@
 {
-  "name": "solid-rev-kit",
+  "name": "@specialdoom/solid-rev-kit",
   "version": "0.0.4",
   "description": "revKit UI for solid js",
   "files": [
     "dist"
   ],
-  "main": "./dist/solid-rev-kitumd.js",
-  "module": "./dist/solid-rev-kites.js",
+  "main": "./dist/solid-rev-kit.umd.js",
+  "module": "./dist/solid-rev-kit.es.js",
   "exports": {
     ".": {
       "import": "./dist/solid-rev-kit.es.js",
       "require": "./dist/solid-rev-kit.umd.js"
     }
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",

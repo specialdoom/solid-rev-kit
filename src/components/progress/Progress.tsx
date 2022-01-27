@@ -8,12 +8,8 @@ export interface ProgressProps {
 }
 
 export const Progress: Component<ProgressProps> = ({ type, percent }) => (
-	<div className="rev-progress">
+	<div>
 		<div
-			className="rev-progress-percent"
-			classList={{
-				[`${type}`]: type && 'accent'
-			}}
 			style={{ width: percent + '%' }}></div>
 	</div>
 );
