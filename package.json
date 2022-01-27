@@ -2,7 +2,17 @@
   "name": "solid-rev-kit",
   "version": "0.0.1",
   "description": "revKit UI for solid js",
-  "main": "index.tsx",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
+    }
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -22,5 +32,8 @@
     "vite": "^2.7.10",
     "vite-plugin-solid": "^2.2.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "include": [
+    "dist"
+  ]
 }
