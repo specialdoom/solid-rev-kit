@@ -10,8 +10,10 @@ import { Progress } from './src/components/progress';
 import { Space } from './src/components/space';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
+import { Icons } from './src/components/icons';
 
 export {
+	Icons,
 	Button,
 	Alert,
 	Heading,

@@ -11,8 +11,16 @@ const Icon = styled('span')`
 	align-items: center;
 `;
 
-export const Plus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Plus fill={fill} /></Icon>;
-export const Cross = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Cross fill={fill} /></Icon>;
-export const Minus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Minus fill={fill} /></Icon>;
-export const More = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.More fill={fill} /></Icon>;
-export const Burger = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Burger fill={fill} /></Icon>;
+const Plus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Plus fill={fill} /></Icon>;
+const Cross = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Cross fill={fill} /></Icon>;
+const Minus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Minus fill={fill} /></Icon>;
+const More = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.More fill={fill} /></Icon>;
+const Burger = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Burger fill={fill} /></Icon>;
+
+export const Icons = Object.assign({}, {
+	Plus,
+	Cross,
+	Minus,
+	More,
+	Burger
+})
