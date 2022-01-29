@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/solid-rev-kit",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "revKit UI for solid js",
   "files": [
     "dist",
