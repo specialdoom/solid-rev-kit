@@ -11,5 +11,15 @@ export default defineConfig({
       fileName: (format) => `solid-rev-kit.${format}.js`,
     },
     target: 'esnext',
-  }
+    rollupOptions: {
+      external: ['solid-js'],
+      output: {
+        // Provide global variables to use in the UMD build
+        // for externalized deps
+        globals: {
+          ['solid-js']: 'solidJs'
+        }
+      }
+    }
+  },
 });
