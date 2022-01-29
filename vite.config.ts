@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import dts from 'vite-dts'
 import path from 'path';
 
 export default defineConfig({
-  plugins: [solidPlugin()],
+  plugins: [solidPlugin(), dts()],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.tsx'),
