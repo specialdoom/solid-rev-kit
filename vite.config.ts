@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'index.tsx'),
-      name: 'solid-rev-kit',
-      fileName: (format) => `solid-rev-kit.${format}.js`
+      name: '@specialdoom/solid-rev-kit',
+      fileName: (format) => `index.${format}.js`
     },
     target: 'esnext',
   }
