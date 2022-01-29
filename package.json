@@ -3,20 +3,23 @@
   "version": "0.0.11",
   "description": "revKit UI for solid js",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "types"
   ],
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/solid-rev-kit.umd.js",
+  "module": "./dist/solid-rev-kit.es.js",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/solid-rev-kit.es.js",
+      "require": "./dist/solid-rev-kit.umd.js"
     }
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint . --ext .ts,.tsx"
   },
@@ -30,7 +33,6 @@
     "solid-styled-components": "^0.27.4",
     "typescript": "^4.5.4",
     "vite": "^2.7.10",
-    "vite-dts": "^1.0.4",
     "vite-plugin-solid": "^2.2.1"
   },
   "dependencies": {
