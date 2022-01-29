@@ -1,0 +1,1 @@
+declare module '@specialdoom/solid-rev-kit';

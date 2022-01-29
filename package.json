@@ -5,7 +5,8 @@
   "files": [
     "dist",
     "src",
-    "types"
+    "types",
+    "index.d.ts"
   ],
   "main": "./dist/solid-rev-kit.umd.js",
   "module": "./dist/solid-rev-kit.es.js",
@@ -15,7 +16,7 @@
       "require": "./dist/solid-rev-kit.umd.js"
     }
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",
