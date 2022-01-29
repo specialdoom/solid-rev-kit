@@ -3,7 +3,9 @@ import { Space } from '../space/Space';
 import { Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Heading } from '../typography';
-import { Cross } from '../icons';
+import { Icons } from '../icons';
+
+const { Cross } = Icons;
 
 export interface ModalProps {
 	visible: boolean;

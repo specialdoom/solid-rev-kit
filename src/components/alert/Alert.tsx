@@ -1,8 +1,10 @@
 import { Component, createSignal, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Cross } from '../icons';
+import { Icons } from '../icons';
 import { Colors } from '../themeProvider/theme';
 import { Paragraph } from '../typography';
+
+const { Cross } = Icons;
 
 export interface AlertProps {
 	type?: keyof Colors;

@@ -1,6 +1,8 @@
 import { Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { More } from '../icons';
+import { Icons } from '../icons';
+
+const { More } = Icons;
 
 export interface ColorCardProps {
 	backgroundColor?: string;
