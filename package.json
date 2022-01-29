@@ -20,7 +20,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "rm -rf types && tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint . --ext .ts,.tsx"
   },

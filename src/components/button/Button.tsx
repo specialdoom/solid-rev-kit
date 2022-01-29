@@ -1,6 +1,15 @@
 import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { ButtonType, ButtonProps } from './Button.types';
+
+export type ButtonType = 'bright' | 'ghost' | 'accent';
+
+export interface ButtonProps {
+	variant?: ButtonType;
+	small?: boolean;
+	onClick?: (event: MouseEvent) => void;
+	disabled?: boolean;
+}
+
 
 const StyledButton = styled('button') <{
 	variant: ButtonType;
