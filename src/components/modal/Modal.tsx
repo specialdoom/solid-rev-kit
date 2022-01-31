@@ -1,6 +1,6 @@
 import { Button } from '../button/Button';
 import { Space } from '../space/Space';
-import { Component, Show } from 'solid-js';
+import { Accessor, Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Heading } from '../typography';
 import { Icons } from '../icons';
@@ -8,7 +8,7 @@ import { Icons } from '../icons';
 const { Cross } = Icons;
 
 export interface ModalProps {
-	visible: boolean;
+	visible: Accessor<boolean>;
 	title: string;
 	onCancel: () => void;
 	onOk: () => void;
@@ -60,8 +60,8 @@ const ModalActions = styled('div')`
   align-items: center;
 `;
 
-export const Modal: Component<ModalProps> = ({ visible, title, onOk, onCancel, children }) => (
-	<Show when={visible}>
+export const Modal: Component<ModalProps> = ({ visible, title, onCancel, onOk, children }) => (
+	<Show when={visible()}>
 		<ModalWrap>
 			<ModalDialog>
 				<ModalHeader>
