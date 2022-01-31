@@ -22,7 +22,8 @@
     "dev": "vite",
     "build": "rm -rf types && tsc && vite build",
     "serve": "vite preview",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "pre:publish": "build"
   },
   "license": "MIT",
   "devDependencies": {
