@@ -47,6 +47,10 @@ const ModalHeader = styled('div')`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+	& svg {
+		cursor: pointer;
+	}
 `;
 
 const ModalBody = styled('div')`

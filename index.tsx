@@ -12,6 +12,7 @@ import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
 import { Icons } from './src/components/icons';
 import { Modal } from './src/components/modal';
+import { Tooltip } from './src/components/tooltip';
 
 export {
 	Icons,
@@ -28,6 +29,7 @@ export {
 	Spinner,
 	Space,
 	Tag,
+	Tooltip,
 	RevKitTheme,
 	theme
 };
