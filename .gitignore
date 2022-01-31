@@ -3,3 +3,5 @@ dist
 *.js
 *.jsx
 types
+app.tsx
+index.html
