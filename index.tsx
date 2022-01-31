@@ -11,6 +11,7 @@ import { Space } from './src/components/space';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
 import { Icons } from './src/components/icons';
+import { Modal } from './src/components/modal';
 
 export {
 	Icons,
@@ -20,6 +21,7 @@ export {
 	Paragraph,
 	Label,
 	Avatar,
+	Modal,
 	Card,
 	Callout,
 	Progress,

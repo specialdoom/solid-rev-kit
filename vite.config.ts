@@ -12,12 +12,13 @@ export default defineConfig({
     },
     target: 'esnext',
     rollupOptions: {
-      external: ['solid-js'],
+      external: ['solid-js', 'solid-styled-components'],
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          ['solid-js']: 'solidJs'
+          ['solid-js']: 'solidJs',
+          ['solid-styled-components']: 'solidStyledComponents'
         }
       }
     }
