@@ -1,4 +1,16 @@
-import { Input, InputProps } from './Input';
+import { Input } from './Input';
+import { TextArea } from './TextArea';
 
-export { Input };
-export type { InputProps };
+export { Input, TextArea };
+
+interface BaseInputProps {
+	value?: string;
+	placeholder?: string;
+	disabled?: boolean;
+	onChange?: (event: Event) => void;
+	onBlur?: (event: Event) => void;
+	onInput?: (event: Event) => void;
+	onFocus?: (event: Event) => void;
+}
+
+export type { BaseInputProps };

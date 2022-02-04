@@ -1,26 +1,21 @@
 import { Component, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { IconElement } from '../icons';
+import { BaseInputProps } from '.';
 
-export interface InputProps {
-	value?: string;
-	placeholder?: string;
-	disabled?: boolean;
+export interface InputProps extends BaseInputProps {
 	icon?: JSXElement;
-	onChange?: (event: Event) => void;
-	onBlur?: (event: Event) => void;
-	onInput?: (event: Event) => void;
-	onFocus?: (event: Event) => void;
 }
 
-const InputContainer = styled('div')`
+const InputContainer = styled('div') <{
+	disabled?: boolean
+}>`
 	display: inline-flex;
 	justify-content: space-between;
 	align-items: center;
 	height: 52px;
 	outline: unset;
 	border-radius: 6px;
-	background: ${props => props.theme.colors.bright};
+	background: ${props => props.disabled ? props.theme.colors.shade : props.theme.colors.bright};
 	border: 1px solid ${props => props.theme.colors.shade};
 	font-size: 16px;
 	box-sizing: border-box;
@@ -49,15 +44,10 @@ const StyledInput = styled('input')`
 	}
 `;
 
-export const Input: Component<InputProps> = ({ value, placeholder, disabled, icon, onChange, onBlur, onInput }) => (
-	<InputContainer>
+export const Input: Component<InputProps> = ({ icon, disabled, ...rest }) => (
+	<InputContainer disabled={disabled}>
 		<StyledInput
-			value={value}
-			placeholder={placeholder}
-			disabled={disabled}
-			onChange={onChange}
-			onBlur={onBlur}
-			onInput={onInput}
+			{...rest}
 		/>
 		<Show when={icon}>
 			{icon}

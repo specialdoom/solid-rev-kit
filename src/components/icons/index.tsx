@@ -28,4 +28,4 @@ export const Icons = Object.assign({}, {
 	More,
 	Burger,
 	Lens
-})
+});
