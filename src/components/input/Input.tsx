@@ -47,6 +47,7 @@ const StyledInput = styled('input')`
 export const Input: Component<InputProps> = ({ icon, disabled, ...rest }) => (
 	<InputContainer disabled={disabled}>
 		<StyledInput
+			disabled={disabled}
 			{...rest}
 		/>
 		<Show when={icon}>
