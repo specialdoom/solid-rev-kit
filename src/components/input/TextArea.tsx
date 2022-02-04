@@ -13,6 +13,7 @@ const StyledTextArea = styled('textarea')`
 	font-size: 16px;
 	padding: 16px;
 	border-radius: 6px;
+	height: fit-content;
 
 	&:focus {
 		outline: unset;

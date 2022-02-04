@@ -20,6 +20,7 @@ const Minus = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onCli
 const More = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.More fill={fill} /></Icon>;
 const Burger = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Burger fill={fill} /></Icon>;
 const Lens = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Lens fill={fill} /></Icon>;
+const Circle = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Circle fill={fill} /></Icon>;
 
 export const Icons = Object.assign({}, {
 	Plus,
@@ -27,5 +28,6 @@ export const Icons = Object.assign({}, {
 	Minus,
 	More,
 	Burger,
-	Lens
+	Lens,
+	Circle
 });
