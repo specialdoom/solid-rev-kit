@@ -9,7 +9,7 @@ export interface TooltipProps {
 }
 
 export const Tooltip: Component<TooltipProps> = ({ type = 'accent', title, placement = 'auto', trigger = 'mouseenter', children }) => {
-	const divRef: HTMLDivElement = new HTMLDivElement();
+	let divRef: any;
 
 	onMount(() => {
 		if (divRef) tippy(divRef, {
