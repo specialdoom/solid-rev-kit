@@ -4,6 +4,7 @@ import { Avatar } from './src/components/avatar';
 import { Button } from './src/components/button';
 import { Callout } from './src/components/callout';
 import { Card } from './src/components/card';
+import { Counter } from './src/components/counter';
 import { Heading, Paragraph, Label } from './src/components/typography';
 import { Icons } from './src/components/icons';
 import { Input, TextArea } from './src/components/input';
@@ -23,6 +24,7 @@ export {
 	Button,
 	Callout,
 	Card,
+	Counter,
 	Heading,
 	Icons,
 	Input,
