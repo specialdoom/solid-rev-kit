@@ -71,8 +71,8 @@ const ValueInput = styled('input')`
 	background: transparent;
 `;
 
-export const Counter: Component<CounterProps> = ({ defaultValue, disabled, maxValue = 999, minValue = -999, onInput, ...rest }) => {
-	const [getValue, setValue] = createSignal(Number(defaultValue) ?? 0);
+export const Counter: Component<CounterProps> = ({ defaultValue = 0, disabled, maxValue = 999, minValue = -999, onInput, ...rest }) => {
+	const [getValue, setValue] = createSignal(defaultValue);
 
 	const handleInput = (e: Event) => {
 		//@ts-ignore

@@ -11,6 +11,7 @@ import { Input, TextArea } from './src/components/input';
 import { Modal } from './src/components/modal';
 import { RevKitTheme } from './src/components/themeProvider/ThemeProvider';
 import { Space } from './src/components/space';
+import { Switch } from './src/components/switch';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
 import { Tooltip } from './src/components/tooltip';
@@ -34,6 +35,7 @@ export {
 	RevKitTheme,
 	Spinner,
 	Space,
+	Switch,
 	Tag,
 	TextArea,
 	Tooltip

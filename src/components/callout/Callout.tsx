@@ -13,6 +13,7 @@ const StyledSmallCallout = styled('div')`
 	width: 100%;
 	height: 80%;
 	display: inline-flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	background: ${props => props.theme.colors.bright};
