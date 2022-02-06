@@ -9,6 +9,7 @@ import { Heading, Paragraph, Label } from './src/components/typography';
 import { Icons } from './src/components/icons';
 import { Input, TextArea } from './src/components/input';
 import { Modal } from './src/components/modal';
+import { Progress } from './src/components/progress';
 import { RevKitTheme } from './src/components/themeProvider/ThemeProvider';
 import { Space } from './src/components/space';
 import { Switch } from './src/components/switch';
@@ -32,6 +33,7 @@ export {
 	Label,
 	Modal,
 	Paragraph,
+	Progress,
 	RevKitTheme,
 	Spinner,
 	Space,
