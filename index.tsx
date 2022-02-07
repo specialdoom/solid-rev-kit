@@ -11,6 +11,7 @@ import { Input, TextArea } from './src/components/input';
 import { Modal } from './src/components/modal';
 import { Progress } from './src/components/progress';
 import { RevKitTheme } from './src/components/themeProvider/ThemeProvider';
+import { Select } from './src/components/select';
 import { Space } from './src/components/space';
 import { Switch } from './src/components/switch';
 import { Spinner } from './src/components/spinner';
@@ -35,6 +36,7 @@ export {
 	Paragraph,
 	Progress,
 	RevKitTheme,
+	Select,
 	Spinner,
 	Space,
 	Switch,
