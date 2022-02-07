@@ -34,8 +34,8 @@ const StyledButton = styled('button')`
 	}
 
 	.slider .toggle {
-		height: 24px;
-		width: 24px;
+		height: 20px;
+		width: 20px;
 		border-radius: 50%;
 		background-color: ${props => props.theme.colors.bright};
 		border: 1px solid ${props => props.theme.colors.shade};
@@ -61,7 +61,7 @@ const StyledButton = styled('button')`
 	}
 
 	input:checked + .slider .toggle {
-		transform: translateX(19px);
+		transform: translateX(22px);
   	transition: .4s;
 	}
 `;

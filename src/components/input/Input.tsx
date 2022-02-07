@@ -21,6 +21,7 @@ const InputContainer = styled('div') <{
 	box-sizing: border-box;
 	gap: 16px;
 	padding: 0 16px;
+	min-width: 360px;
 
 	&:focus-within {
 		outline: none;

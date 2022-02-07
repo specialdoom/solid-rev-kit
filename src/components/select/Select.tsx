@@ -1,14 +1,16 @@
 import { Component, createSignal, For, onCleanup, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
+import { theme } from '../themeProvider/theme';
 
 const { ChevronLeft, ChevronDown } = Icons;
 
 export interface SelectProps {
 	options: string[];
 	placeholder?: string;
-	selected?: string;
+	defaultOption?: string;
 	onSelect?: (option: string) => void;
+	disabled?: boolean;
 }
 
 const SelectContainer = styled('div')`
@@ -32,10 +34,27 @@ const SelectContainer = styled('div')`
     box-sizing: border-box;
 		padding: 16px;
 
+		& span svg path {
+			fill: ${props => props.theme.colors.accent};
+		}
+
 		&.selected {
 			border: 2px solid ${props => props.theme.colors.accent};
 		}
+
+		&.disabled {
+			background: ${props => props.theme.colors.shade};
+			color: ${props => props.theme.colors.secondary};
+
+			& span svg path {
+				fill: ${props => props.theme.colors.secondary};
+			}
+		}
 	}
+`;
+
+const SelectPlaceholder = styled('span')`
+	color: ${props => props.theme.colors.muted};
 `;
 
 const OptionsList = styled('div')`
@@ -48,14 +67,18 @@ const OptionsList = styled('div')`
 	padding: 12px 0;
 	border-radius: 6px;
 	background: ${props => props.theme.colors.bright};
+	z-index: 3;
 `;
 
-const OptionListItem = styled('div')`
+const OptionListItem = styled('div') <{
+	selected?: boolean
+}>`
 	height: 44px;
 	text-align: left;
 	padding: 12px 15px;
+	background: ${props => props.selected ? props.theme.colors.tint : props.theme.colors.bright};
 
-	&:hover {
+	&:hover, &.selected  {
 		background: ${props => props.theme.colors.tint};
 	}
 `;
@@ -67,25 +90,31 @@ const clickOutside = (el: any, accessor: any) => {
 	onCleanup(() => document.body.removeEventListener("click", onClick));
 }
 
-export const Select: Component<SelectProps> = ({ options = ['test'], placeholder = 'Select', selected }) => {
+export const Select: Component<SelectProps> = ({ options = ['test'], placeholder = 'Select', defaultOption, disabled = false }) => {
 	const [getOpen, setOpen] = createSignal(false);
-	const [getSelectedOption, setSelectedOption] = createSignal(selected)
+	const [getSelectedOption, setSelectedOption] = createSignal(defaultOption)
 
 	const handleOptionSelect = (option: string) => {
 		setSelectedOption(option);
 		setOpen(false);
 	}
 
+	const handleClick = () => {
+		if (disabled) return;
+
+		setOpen(v => !v);
+	}
+
 	return (
 		<SelectContainer>
 			<div
-				onClick={() => setOpen(v => !v)}
+				onClick={handleClick}
 				className="select"
-				classList={{ 'selected': getOpen() }}
+				classList={{ 'selected': getOpen(), 'disabled': disabled }}
 				//@ts-ignore
 				use:clickOutside={() => setOpen(false)}
 			>
-				<Show when={getSelectedOption()} fallback={() => <>{placeholder}</>}>
+				<Show when={getSelectedOption()} fallback={() => <SelectPlaceholder>{placeholder}</SelectPlaceholder>}>
 					{getSelectedOption()}
 				</Show>
 				<Show
@@ -98,12 +127,12 @@ export const Select: Component<SelectProps> = ({ options = ['test'], placeholder
 			<Show when={getOpen()}>
 				<OptionsList>
 					<For each={options}>{option => (
-						<OptionListItem onClick={() => handleOptionSelect(option)}>
+						<OptionListItem onClick={() => handleOptionSelect(option)} selected={option === getSelectedOption()}>
 							{option}
 						</OptionListItem>
 					)}</For>
 				</OptionsList>
 			</Show>
 		</SelectContainer>
-	)
+	);
 };
