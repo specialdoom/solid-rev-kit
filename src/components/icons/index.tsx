@@ -21,6 +21,8 @@ const More = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClic
 const Burger = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Burger fill={fill} /></Icon>;
 const Lens = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Lens fill={fill} /></Icon>;
 const Circle = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.Circle fill={fill} /></Icon>;
+const ChevronLeft = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.ChevronLeft fill={fill} /></Icon>;
+const ChevronDown = ({ fill = '#2c2738', onClick }: IconProps) => <Icon onClick={onClick}><RevIcon.ChevronDown fill={fill} /></Icon>;
 
 export const Icons = Object.assign({}, {
 	Plus,
@@ -29,5 +31,7 @@ export const Icons = Object.assign({}, {
 	More,
 	Burger,
 	Lens,
-	Circle
+	Circle,
+	ChevronLeft,
+	ChevronDown
 });
