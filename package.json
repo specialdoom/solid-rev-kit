@@ -1,12 +1,11 @@
 {
   "name": "@specialdoom/solid-rev-kit",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "revKit UI for solid js",
   "files": [
     "dist",
     "src",
-    "types",
-    "index.d.ts"
+    "types"
   ],
   "main": "./dist/solid-rev-kit.umd.js",
   "module": "./dist/solid-rev-kit.es.js",
@@ -16,12 +15,11 @@
       "require": "./dist/solid-rev-kit.umd.js"
     }
   },
-  "types": "index.d.ts",
+  "types": "types/index.d.ts",
   "scripts": {
-    "start": "vite",
     "dev": "vite",
-    "build": "rm -rf types && tsc && vite build",
-    "serve": "vite preview",
+    "prebuild": "tsc",
+    "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx",
     "prepublish": "npm run build"
   },

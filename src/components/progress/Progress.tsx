@@ -3,13 +3,13 @@ import { styled } from 'solid-styled-components';
 
 export interface ProgressProps {
 	type?: 'accent' | 'warning' | 'success' | 'error',
-	percent: number,
+	percent?: number,
 	loading?: boolean
 }
 
 const StyledProgress = styled('div') <{
 	type: 'accent' | 'warning' | 'success' | 'error',
-	percent: number,
+	percent?: number,
 	loading: boolean
 }>`
 	width: 100%;
@@ -22,6 +22,10 @@ const StyledProgress = styled('div') <{
 		width: ${props => `${props.percent}%`};
 		height: 8px;
 		border-radius: 2px;
+
+		${props => props.percent ? `
+			width: ${props.percent}%;
+		`: ''}
 		
 		${props => props.loading ? `
 			animation-name: loading;

@@ -1,7 +1,5 @@
 node_modules
 dist
-*.js
-*.jsx
 types
 app.tsx
 index.html

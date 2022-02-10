@@ -4,21 +4,18 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "node",
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "declarationDir": "types",
-    "outDir": "dist",
-    "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "noImplicitAny": true,
     "esModuleInterop": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"]
+    "outDir": "types",
+    "types": ["vite/client"],
+    "declaration": true,
+    "emitDeclarationOnly": true
   },
   "exclude": [
     "dist",
-    "node_modules",
-    "*.config.ts"
+    "types",
+    "app.tsx"
   ]
 }

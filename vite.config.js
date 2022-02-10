@@ -6,21 +6,19 @@ export default defineConfig({
   plugins: [solidPlugin()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'index.tsx'),
+      entry: path.resolve(__dirname, 'index.ts'),
       name: 'solid-rev-kit',
-      fileName: (format) => `solid-rev-kit.${format}.js`,
+      fileName: (format) => `solid-rev-kit.${format}.js`
     },
     target: 'esnext',
     rollupOptions: {
       external: ['solid-js', 'solid-styled-components'],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
         globals: {
           ['solid-js']: 'solidJs',
           ['solid-styled-components']: 'solidStyledComponents'
         }
       }
     }
-  },
+  }
 });
