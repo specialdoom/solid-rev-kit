@@ -16,7 +16,6 @@ import { Space } from './src/components/space';
 import { Switch } from './src/components/switch';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
-import { Tooltip } from './src/components/tooltip';
 
 // constants
 import { theme } from './src/components/themeProvider/theme';
@@ -41,8 +40,7 @@ export {
 	Space,
 	Switch,
 	Tag,
-	TextArea,
-	Tooltip
+	TextArea
 };
 
 export const constants = { theme };
