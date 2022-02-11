@@ -6,15 +6,16 @@ import { Paragraph } from '../typography';
 
 const { Cross } = Icons;
 
+type AlertType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
+
 export interface AlertProps {
-	type?: keyof Colors;
-	textColor?: keyof Colors;
-	iconColor?: string;
+	type?: AlertType
+	color?: keyof Colors
 }
 
 const StyledAlert = styled('div') <{
-	type: keyof Colors;
-	textColor: keyof Colors;
+	type: AlertType,
+	color: keyof Colors
 }>`
 	background-color: ${(props) => props.theme.colors[props.type]};
 	box-sizing: border-box;
@@ -25,28 +26,31 @@ const StyledAlert = styled('div') <{
   align-items: center;
   padding: 15px 24px;
   border-radius: 10px;
-	color: ${props => props.theme.colors[props.textColor]};
+	color: ${props => props.theme.colors[props.color]};
   font-weight: 400;
 	gap: 8px;
 
 	& svg {
 		cursor: pointer;
+
+		& path {
+			fill: ${props => props.theme.colors[props.color]};
+		}
 	}
 `;
 
 export const Alert: Component<AlertProps> = ({
-	type = 'bright',
-	textColor = 'bright',
-	iconColor = '#ffffff',
+	type = 'accent',
+	color = 'bright',
 	children
 }) => {
 	const [getClosed, setClosed] = createSignal(false);
 
 	return (
 		<Show when={!getClosed()}>
-			<StyledAlert type={type} textColor={textColor} >
-				<Paragraph type={textColor}>{children}</Paragraph>
-				<Cross fill={iconColor} onClick={() => setClosed(true)} />
+			<StyledAlert type={type} color={color}>
+				<Paragraph type={color}>{children}</Paragraph>
+				<Cross onClick={() => setClosed(true)} />
 			</StyledAlert>
 		</Show >
 	);

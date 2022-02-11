@@ -4,7 +4,7 @@ import { Heading, Paragraph } from '../typography';
 
 export interface CalloutProps {
 	title?: string;
-	text: string;
+	description: string;
 	actions?: JSXElement[];
 	small?: boolean;
 }
@@ -44,22 +44,22 @@ const StyledLargeCallout = styled('div')`
 	border-radius: 16px;
 `;
 
-const SmallCallout: Component<CalloutProps> = ({ text, actions }) => (
+const SmallCallout: Component<CalloutProps> = ({ description, actions }) => (
 	<StyledSmallCallout>
-		<Heading size={6}>{text}</Heading>
+		<Heading size={6}>{description}</Heading>
 		<ActionsContainer small>
 			<For each={actions}>{action => action}</For>
 		</ActionsContainer>
 	</StyledSmallCallout>
 );
 
-export const Callout: Component<CalloutProps> = ({ title, text, actions, small = false }) => (
+export const Callout: Component<CalloutProps> = ({ title, description, actions, small = false }) => (
 	<Show when={!small}
-		fallback={() => <SmallCallout text={text} actions={actions} />}
+		fallback={() => <SmallCallout description={description} actions={actions} />}
 	>
 		<StyledLargeCallout>
 			<Heading size={4}>{title}</Heading>
-			<Paragraph>{text}</Paragraph>
+			<Paragraph>{description}</Paragraph>
 			<ActionsContainer small={small}>
 				<For each={actions}>{action => action}</For>
 			</ActionsContainer>

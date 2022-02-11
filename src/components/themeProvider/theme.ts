@@ -9,6 +9,7 @@ export type Colors = {
 	bright: string
 	shade: string
 	tint: string
+	dark: string
 }
 
 export type Theme = {
@@ -26,6 +27,7 @@ export const theme: Theme = {
 		muted: '#7C9CBF',
 		bright: '#FFFFFF',
 		shade: '#DBE2EA',
-		tint: '#EBF4F8'
+		tint: '#EBF4F8',
+		dark: '#2C2738'
 	}
 };

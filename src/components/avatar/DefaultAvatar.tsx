@@ -1,14 +1,14 @@
 import { styled } from 'solid-styled-components';
 
-export interface DefaultProps {
-	type?: 'steven' | 'meg' | 'mike' | 'mili';
+export interface DefaultAvatarProps {
+	type?: 'steven' | 'meg' | 'jake' | 'mili';
 	round?: boolean;
 }
 
-const getImageUrl = (type: 'steven' | 'meg' | 'mike' | 'mili') => `https://storage.googleapis.com/rev-kit-assets/${type}.png`;
+const getImageUrl = (type: 'steven' | 'meg' | 'jake' | 'mili') => `https://github.com/specialdoom/solid-rev-kit/blob/main/src/assets/images/${type}.png?raw=true`;
 
 const StyledAvatar = styled('div') <{
-	type: 'steven' | 'meg' | 'mike' | 'mili',
+	type: 'steven' | 'meg' | 'jake' | 'mili',
 	round: boolean;
 }>`
 	height: 56px;
@@ -18,7 +18,7 @@ const StyledAvatar = styled('div') <{
 	background-image: ${props => `url(${getImageUrl(props.type)})`};
 `;
 
-export const DefaultAvatar = ({ type = 'steven', round = false }: DefaultProps) => (
+export const DefaultAvatar = ({ type = 'steven', round = false }: DefaultAvatarProps) => (
 	<StyledAvatar
 		type={type}
 		round={round}

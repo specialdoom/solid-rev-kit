@@ -1,11 +1,11 @@
 import { Avatar as InternalAvatar, AvatarProps } from './Avatar';
-import { DefaultAvatar, DefaultProps } from './DefaultAvatar';
+import { DefaultAvatar, DefaultAvatarProps } from './DefaultAvatar';
 
 const Avatar = Object.assign(InternalAvatar, {
-	Steven: ({ round }: DefaultProps) => <DefaultAvatar type='steven' round={round} />,
-	Mike: ({ round }: DefaultProps) => <DefaultAvatar type='mike' round={round} />,
-	Mili: ({ round }: DefaultProps) => <DefaultAvatar type='mili' round={round} />,
-	Meg: ({ round }: DefaultProps) => <DefaultAvatar type='meg' round={round} />
+	Steven: ({ round }: DefaultAvatarProps) => <DefaultAvatar type='steven' round={round} />,
+	Jake: ({ round }: DefaultAvatarProps) => <DefaultAvatar type='jake' round={round} />,
+	Mili: ({ round }: DefaultAvatarProps) => <DefaultAvatar type='mili' round={round} />,
+	Meg: ({ round }: DefaultAvatarProps) => <DefaultAvatar type='meg' round={round} />
 });
 
 export { Avatar };
