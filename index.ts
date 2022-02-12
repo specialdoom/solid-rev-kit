@@ -5,7 +5,7 @@ import { Button } from './src/components/button';
 import { Callout } from './src/components/callout';
 import { Card } from './src/components/card';
 import { Counter } from './src/components/counter';
-import { Heading, Paragraph, Label } from './src/components/typography';
+import { Typography } from './src/components/typography';
 import { Icons } from './src/components/icons';
 import { Input, TextArea } from './src/components/input';
 import { Modal } from './src/components/modal';
@@ -27,12 +27,9 @@ export {
 	Callout,
 	Card,
 	Counter,
-	Heading,
 	Icons,
 	Input,
-	Label,
 	Modal,
-	Paragraph,
 	Progress,
 	RevKitTheme,
 	Select,
@@ -40,7 +37,8 @@ export {
 	Space,
 	Switch,
 	Tag,
-	TextArea
+	TextArea,
+	Typography
 };
 
 export const constants = { theme };
