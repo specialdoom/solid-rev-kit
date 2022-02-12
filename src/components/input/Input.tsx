@@ -36,6 +36,7 @@ const StyledInput = styled('input')`
 	border: unset;
 	font-size: 16px;
 	margin: 16px 0;
+	width: 100%;
 
 	&::placeholder {
 		color: ${props => props.theme.colors.muted};

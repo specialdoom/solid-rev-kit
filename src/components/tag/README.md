@@ -14,7 +14,7 @@ const Container = () => (
     <Tag type="success">Success tag</Tag>
     <Tag type="warning">Warning tag</Tag>
     <Tag type="error">Error tag</Tag>
-    <Tag type="accent">Accent ta</Tag>
+    <Tag type="accent">Accent tag</Tag>
   </>
 );
 ```

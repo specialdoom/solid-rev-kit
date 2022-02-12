@@ -3,6 +3,7 @@ import { styled } from 'solid-styled-components';
 import { BaseInputProps } from '.';
 
 export interface TextAreaProps extends BaseInputProps {
+	value?: string;
 	rows?: number;
 }
 

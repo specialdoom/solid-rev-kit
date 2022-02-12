@@ -41,4 +41,4 @@ export {
 	Typography
 };
 
-export const constants = { theme };
+export const revConstants = { theme };

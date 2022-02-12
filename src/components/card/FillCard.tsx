@@ -47,10 +47,6 @@ const CardDetails = styled('div')`
 	left: 20px;
 	right: 20px;
 
-	label, h2, p {
-		text-shadow: 3px 0px 7px rgba(150, 150, 150, 1);
-	}
-	
 	label {
 		opacity: 0.8;
 	}
