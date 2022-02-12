@@ -5,8 +5,12 @@
 ```jsx
 import { Counter } from '@specialdoom/solid-rev-kit';
 
-const CounterContainer = () => (
-  <Counter defaultValue={6} minValue={-200} maxValue={200} disabled />
+const Container = () => (
+  <>
+    <Counter value={6} />
+    <Counter value={1} minValue={-2} maxValue={2} />
+    <Counter value={2} disabled />
+  </>
 );
 ```
 

@@ -1,6 +1,6 @@
 import { Component, For, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Heading } from '../typography';
+import { Typography } from '../typography';
 
 export interface GenerircCardProps {
 	imageSrc?: string;
@@ -47,7 +47,7 @@ export const GenericCard: Component<GenerircCardProps> = ({ imageSrc, title, chi
 		<Show when={imageSrc}>
 			<Image src={imageSrc} />
 		</Show>
-		<Heading size={5} weight='bold'>{title}</Heading>
+		<Typography.Heading size={5} weight='bold'>{title}</Typography.Heading>
 		<BodyContainer>
 			{children}
 		</BodyContainer>

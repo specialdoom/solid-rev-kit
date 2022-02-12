@@ -2,7 +2,7 @@ import { Component, createSignal, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { Colors } from '../themeProvider/theme';
-import { Paragraph } from '../typography';
+import { Typography } from '../typography';
 
 const { Cross } = Icons;
 
@@ -49,7 +49,7 @@ export const Alert: Component<AlertProps> = ({
 	return (
 		<Show when={!getClosed()}>
 			<StyledAlert type={type} color={color}>
-				<Paragraph type={color}>{children}</Paragraph>
+				<Typography.Paragraph type={color}>{children}</Typography.Paragraph>
 				<Cross onClick={() => setClosed(true)} />
 			</StyledAlert>
 		</Show >

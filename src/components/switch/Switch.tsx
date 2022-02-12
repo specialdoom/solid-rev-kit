@@ -1,6 +1,5 @@
-import { Component, createEffect, createSignal } from 'solid-js';
+import { Component, createSignal } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Icons } from '../icons';
 import { BaseInputProps } from '../input';
 
 export interface SwitchProps extends BaseInputProps {
@@ -66,7 +65,7 @@ const StyledButton = styled('button')`
 	}
 `;
 
-export const Switch: Component<SwitchProps> = ({ disabled = false, checked = false }) => {
+export const Switch: Component<SwitchProps> = ({ disabled = false, checked = false, ...rest }) => {
 	const [getChecked, setChecked] = createSignal(checked);
 
 	const updateChecked = () => {
@@ -77,7 +76,7 @@ export const Switch: Component<SwitchProps> = ({ disabled = false, checked = fal
 
 	return (
 		<StyledButton onClick={updateChecked}>
-			<input type='checkbox' disabled={disabled} checked={getChecked()} />
+			<input type='checkbox' disabled={disabled} checked={getChecked()} {...rest} />
 			<div class='slider'>
 				<div class='toggle'>
 				</div>

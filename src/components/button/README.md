@@ -5,13 +5,42 @@
 ```jsx
 import { Button } from '@specialdoom/solid-rev-kit';
 
-const ButtonContainer = () => {
+const Container = () => {
   const handleClick = () => console.log('button click');
 
   return (
-    <Button variant="bright" onClick={handleClick} disabled small>
-      Rev Kit Button
-    </Button>
+    <>
+      <Button>Accent button</Button>
+      <Button variant="ghost">Ghost button</Button>
+      <Button variant="bright">Bright button</Button>
+      <hr />
+      <Button disabled>Accent disabled button</Button>
+      <Button variant="ghost" disabled>
+        Ghost disabled button
+      </Button>
+      <Button variant="bright" disabled>
+        Bright disabled button
+      </Button>
+      <hr />
+      <Button small>Accent small button</Button>
+      <Button variant="ghost" small>
+        Ghost small button
+      </Button>
+      <Button variant="bright" small>
+        Bright small button
+      </Button>
+      <hr />
+      <Button small disabled>
+        Accent disabled small button
+      </Button>
+      <Button variant="ghost" small disabled>
+        Ghost disabled small button
+      </Button>
+      <Button variant="bright" small disabled>
+        Bright disabled small button
+      </Button>
+      <hr />
+    </>
   );
 };
 ```

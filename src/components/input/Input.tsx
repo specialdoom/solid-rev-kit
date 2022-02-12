@@ -3,6 +3,7 @@ import { styled } from 'solid-styled-components';
 import { BaseInputProps } from '.';
 
 export interface InputProps extends BaseInputProps {
+	value?: string;
 	icon?: JSXElement;
 }
 

@@ -1,7 +1,6 @@
 import { Component, createSignal, For, onCleanup, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
-import { theme } from '../themeProvider/theme';
 
 const { ChevronLeft, ChevronDown } = Icons;
 
@@ -90,7 +89,7 @@ const clickOutside = (el: any, accessor: any) => {
 	onCleanup(() => document.body.removeEventListener("click", onClick));
 }
 
-export const Select: Component<SelectProps> = ({ options = ['test'], placeholder = 'Select', defaultOption, disabled = false }) => {
+export const Select: Component<SelectProps> = ({ options = [], placeholder, defaultOption, disabled = false }) => {
 	const [getOpen, setOpen] = createSignal(false);
 	const [getSelectedOption, setSelectedOption] = createSignal(defaultOption)
 

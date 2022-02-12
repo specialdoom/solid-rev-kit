@@ -2,14 +2,17 @@ import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../themeProvider/theme';
 
+type TagType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
+
+
 export interface TagProps {
-	type?: keyof Colors;
-	textColor?: keyof Colors;
+	type?: TagType;
+	color?: keyof Colors;
 }
 
 const StyledTag = styled('span') <{
 	type: keyof Colors,
-	textColor: keyof Colors
+	color: keyof Colors
 }>`
 	display: inline-flex;
 	font-size: 14px;
@@ -18,19 +21,19 @@ const StyledTag = styled('span') <{
 	justify-content: space-around;
 	min-width: 50px;
 	background: ${props => props.theme.colors[props.type]};
-	color: ${props => props.theme.colors[props.textColor]};
+	color: ${props => props.theme.colors[props.color]};
 	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	border-radius: 17px;
 `;
 
 export const Tag: Component<TagProps> = ({
 	type = 'accent',
-	textColor = 'bright',
+	color = 'bright',
 	children
 }) => (
 	<StyledTag
 		type={type}
-		textColor={textColor}
+		color={color}
 	>
 		{children}
 	</StyledTag>

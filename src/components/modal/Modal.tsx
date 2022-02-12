@@ -2,7 +2,7 @@ import { Button } from '../button/Button';
 import { Space } from '../space/Space';
 import { Accessor, Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Heading } from '../typography';
+import { Typography } from '../typography';
 import { Icons } from '../icons';
 
 const { Cross } = Icons;
@@ -69,7 +69,7 @@ export const Modal: Component<ModalProps> = ({ visible, title, onCancel, onOk, c
 		<ModalWrap>
 			<ModalDialog>
 				<ModalHeader>
-					<Heading size={5} weight='bold'>{title}</Heading>
+					<Typography.Heading size={5} weight='bold'>{title}</Typography.Heading>
 					<Cross onClick={onCancel} />
 				</ModalHeader>
 				<ModalBody>

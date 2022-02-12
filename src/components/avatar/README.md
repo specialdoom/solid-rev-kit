@@ -5,7 +5,11 @@
 ```jsx
 import { Avatar } from '@specialdoom/solid-rev-kit';
 
-const AvatarContainer = () => <Avatar initials="TI" round />;
+const Container = () => (
+  <>
+    <Avatar initials='RK' />
+		<Avatar initials='RK' round />
+  </>
 ```
 
 ### API
@@ -22,12 +26,22 @@ There are 4 named default avatars: Steven, Jake, Mili and Meg.
 ```jsx
 import { Avatar } from '@specialdoom/solid-rev-kit';
 
-const DefaultAvatarContainer = () => (
+const Container = () => (
   <>
-    <Avatar.Mili />
-    <Avatar.Jake />
-    <Avatar.Steven />
     <Avatar.Meg />
+    <Avatar.Meg round />
+    <Avatar.Mike />
+    <Avatar.Mike round />
+    <Avatar.Steven />
+    <Avatar.Steven round />
+    <Avatar.Mili />
+    <Avatar.Mili round />
   </>
 );
 ```
+
+### API
+
+| Property | Description                 | Type    | Default |
+| -------- | --------------------------- | ------- | ------- |
+| round    | Whether the avatar is round | boolean | false   |

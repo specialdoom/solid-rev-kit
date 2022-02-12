@@ -5,7 +5,7 @@
 ```jsx
 import { Card } from '@specialdoom/solid-rev-kit';
 
-const CardContainer = () => (
+const Container = () => (
   <Card.Generic
     imageSrc="image_source"
     title="Card title"
@@ -31,7 +31,7 @@ const CardContainer = () => (
 ```jsx
 import { Card } from '@specialdoom/solid-rev-kit';
 
-const ColorCardContainer = () => (
+const Container = () => (
   <>
     <Card.Fill background="#0880AE" label="Label" title="Card title" small>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.

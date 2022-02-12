@@ -1,6 +1,6 @@
 import { Component, For, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Heading, Paragraph } from '../typography';
+import { Typography } from '../typography';
 
 export interface CalloutProps {
 	title?: string;
@@ -46,7 +46,7 @@ const StyledLargeCallout = styled('div')`
 
 const SmallCallout: Component<CalloutProps> = ({ description, actions }) => (
 	<StyledSmallCallout>
-		<Heading size={6}>{description}</Heading>
+		<Typography.Heading size={6}>{description}</Typography.Heading>
 		<ActionsContainer small>
 			<For each={actions}>{action => action}</For>
 		</ActionsContainer>
@@ -58,8 +58,8 @@ export const Callout: Component<CalloutProps> = ({ title, description, actions, 
 		fallback={() => <SmallCallout description={description} actions={actions} />}
 	>
 		<StyledLargeCallout>
-			<Heading size={4}>{title}</Heading>
-			<Paragraph>{description}</Paragraph>
+			<Typography.Heading size={4}>{title}</Typography.Heading>
+			<Typography.Paragraph>{description}</Typography.Paragraph>
 			<ActionsContainer small={small}>
 				<For each={actions}>{action => action}</For>
 			</ActionsContainer>
