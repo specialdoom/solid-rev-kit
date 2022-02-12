@@ -1,6 +1,6 @@
 # Select component
 
-https://img.shields.io/badge/skeleton-only-yellow
+![skeleton only](https://img.shields.io/badge/skeleton%20only-not%20fully%20functional-yellow)
 
 ### Usage
 

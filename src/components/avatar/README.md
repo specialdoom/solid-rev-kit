@@ -1,4 +1,4 @@
-# Alert component
+# Avatar component
 
 ### Usage
 
@@ -8,7 +8,7 @@ import { Avatar } from '@specialdoom/solid-rev-kit';
 const Container = () => (
   <>
     <Avatar initials='RK' />
-		<Avatar initials='RK' round />
+    <Avatar initials='RK' round />
   </>
 ```
 
@@ -19,7 +19,7 @@ const Container = () => (
 | initials | Display initials            | string  | undefined |
 | round    | Whether the avatar is round | boolean | false     |
 
-### Default avatars
+# Default avatars
 
 There are 4 named default avatars: Steven, Jake, Mili and Meg.
 
