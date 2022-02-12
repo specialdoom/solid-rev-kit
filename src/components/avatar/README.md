@@ -5,7 +5,7 @@
 ```jsx
 import { Avatar } from '@specialdoom/solid-rev-kit';
 
-<Avatar initials="TI" round />;
+const AvatarContainer = () => <Avatar initials="TI" round />;
 ```
 
 ### API
@@ -22,8 +22,12 @@ There are 4 named default avatars: Steven, Jake, Mili and Meg.
 ```jsx
 import { Avatar } from '@specialdoom/solid-rev-kit';
 
-<Avatar.Mili />
-<Avatar.Jake />
-<Avatar.Steven />
-<Avatar.Meg />
+const DefaultAvatarContainer = () => (
+  <>
+    <Avatar.Mili />
+    <Avatar.Jake />
+    <Avatar.Steven />
+    <Avatar.Meg />
+  </>
+);
 ```

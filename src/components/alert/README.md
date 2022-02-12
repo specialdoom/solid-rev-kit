@@ -5,9 +5,11 @@
 ```jsx
 import { Alert } from '@specialdoom/solid-rev-kit';
 
-<Alert type="bright" color="accent">
-  A bright alert flash for dark backgrounds, which never lose the contrast.
-</Alert>;
+const AlertContainer = () => (
+  <Alert type="bright" color="accent">
+    A bright alert flash for dark backgrounds, which never lose the contrast.
+  </Alert>
+);
 ```
 
 ### API

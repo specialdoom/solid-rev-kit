@@ -2,10 +2,9 @@ import { Component, For, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Heading } from '../typography';
 
-export interface CardProps {
+export interface GenerircCardProps {
 	imageSrc?: string;
 	title?: string;
-	body?: string;
 	actions?: JSXElement[];
 }
 
@@ -43,19 +42,17 @@ const BodyContainer = styled('div')`
   padding: 8px 0;
 `;
 
-export const Card: Component<CardProps> = ({ imageSrc, title, children, actions }) => {
-	return (
-		<StyledCard>
-			<Show when={imageSrc}>
-				<Image src={imageSrc} />
-			</Show>
-			<Heading size={5} weight='bold'>{title}</Heading>
-			<BodyContainer>
-				{children}
-			</BodyContainer>
-			<ActionsContainer>
-				<For each={actions}>{(action) => action}</For>
-			</ActionsContainer>
-		</StyledCard>
-	);
-};
+export const GenericCard: Component<GenerircCardProps> = ({ imageSrc, title, children, actions }) => (
+	<StyledCard>
+		<Show when={imageSrc}>
+			<Image src={imageSrc} />
+		</Show>
+		<Heading size={5} weight='bold'>{title}</Heading>
+		<BodyContainer>
+			{children}
+		</BodyContainer>
+		<ActionsContainer>
+			<For each={actions}>{(action) => action}</For>
+		</ActionsContainer>
+	</StyledCard>
+);

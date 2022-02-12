@@ -5,11 +5,15 @@
 ```jsx
 import { Button } from '@specialdoom/solid-rev-kit';
 
-const handleClick = () => console.log('button click');
+const ButtonContainer = () => {
+  const handleClick = () => console.log('button click');
 
-<Button variant="bright" onClick={handleClick} disabled small>
-  Rev Kit Button
-</Button>;
+  return (
+    <Button variant="bright" onClick={handleClick} disabled small>
+      Rev Kit Button
+    </Button>
+  );
+};
 ```
 
 ### API

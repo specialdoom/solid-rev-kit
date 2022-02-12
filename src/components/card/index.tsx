@@ -1,5 +1,10 @@
-import { Card, CardProps } from './Card';
-import { ColorCard, ColorCardProps } from './ColorCard';
+import { GenericCard, GenerircCardProps } from './GenericCard';
+import { FillCard, FillCardProps } from './FillCard';
 
-export { Card, ColorCard };
-export type { CardProps, ColorCardProps };
+const Card = Object.assign({}, {
+	Fill: FillCard,
+	Generic: GenericCard
+});
+
+export { Card };
+export type { GenerircCardProps, FillCardProps };

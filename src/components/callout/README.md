@@ -5,16 +5,18 @@
 ```jsx
 import { Callout } from '@specialdoom/solid-rev-kit';
 
-<Callout
-  title="Callout Title"
-  text="Supportive text for the callout goes here like a pro, which informs and helps users decide what they should do next."
-  actions={[
-    <Button small>Action</Button>,
-    <Button variant="ghost" small>
-      Action
-    </Button>
-  ]}
-/>;
+const CalloutContainer = () => (
+  <Callout
+    title="Callout Title"
+    text="Supportive text for the callout goes here like a pro, which informs and helps users decide what they should do next."
+    actions={[
+      <Button small>Action</Button>,
+      <Button variant="ghost" small>
+        Action
+      </Button>
+    ]}
+  />
+);
 ```
 
 ### API

@@ -4,7 +4,6 @@ import { TextArea } from './TextArea';
 export { Input, TextArea };
 
 interface BaseInputProps {
-	value?: string;
 	placeholder?: string;
 	disabled?: boolean;
 	onChange?: (event: Event) => void;

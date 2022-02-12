@@ -4,7 +4,7 @@ import { Icons } from '../icons';
 import { BaseInputProps } from '../input';
 
 export interface CounterProps extends BaseInputProps {
-	defaultValue?: number;
+	value?: number;
 	maxValue?: number;
 	minValue?: number;
 }
@@ -52,6 +52,7 @@ const ControlButton = styled('button') <{
 
 	&:disabled {
 		background: ${props => props.theme.colors.shade};
+
 		& > span > svg > path {
 			fill: ${props => props.theme.colors.secondary};
 		}
@@ -69,10 +70,11 @@ const ValueInput = styled('input')`
 	border-left: 1px solid ${props => props.theme.colors.shade};
 	border-right: 1px solid ${props => props.theme.colors.shade};
 	background: transparent;
+
 `;
 
-export const Counter: Component<CounterProps> = ({ defaultValue = 0, disabled, maxValue = 999, minValue = -999, onInput, ...rest }) => {
-	const [getValue, setValue] = createSignal(defaultValue);
+export const Counter: Component<CounterProps> = ({ value = 0, disabled, maxValue = 999, minValue = -999, onInput, ...rest }) => {
+	const [getValue, setValue] = createSignal(value);
 
 	const handleInput = (e: Event) => {
 		//@ts-ignore
