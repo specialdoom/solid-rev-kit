@@ -18,7 +18,7 @@
   "types": "types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "prebuild": "tsc",
+    "prebuild": "tsc && eslint . --ext .ts,.tsx",
     "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx",
     "prepublish": "npm run build"
