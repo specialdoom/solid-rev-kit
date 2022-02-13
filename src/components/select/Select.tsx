@@ -4,11 +4,21 @@ import { Icons } from '../icons';
 
 const { ChevronLeft, ChevronDown } = Icons;
 
+type SelectOptionValue = string;
+
+interface SelectOption {
+	label: string;
+	value: SelectOptionValue;
+	disabled?: boolean;
+}
+
 export interface SelectProps {
-	options: string[];
+	options: SelectOption[];
 	placeholder?: string;
-	defaultOption?: string;
-	onSelect?: (option: string) => void;
+	defaultOption?: SelectOptionValue;
+	onSelect?: (option: SelectOptionValue) => void;
+	onChange?: (option: SelectOptionValue) => void;
+	onBlur?: (option: SelectOptionValue) => void;
 	disabled?: boolean;
 }
 
@@ -70,7 +80,8 @@ const OptionsList = styled('div')`
 `;
 
 const OptionListItem = styled('div') <{
-	selected?: boolean
+	selected?: boolean,
+	disabled?: boolean
 }>`
 	height: 44px;
 	text-align: left;
@@ -80,6 +91,16 @@ const OptionListItem = styled('div') <{
 	&:hover, &.selected  {
 		background: ${props => props.theme.colors.tint};
 	}
+
+	${props => props.disabled ? `
+		background: ${props.theme.colors.shade};
+		color: ${props.theme.colors.secondary};
+		pointer-events: none;
+
+		&:hover {
+			background: ${props.theme.colors.shade};
+		}
+	` : ''}
 `;
 
 const clickOutside = (el: any, accessor: any) => {
@@ -89,12 +110,22 @@ const clickOutside = (el: any, accessor: any) => {
 	onCleanup(() => document.body.removeEventListener("click", onClick));
 }
 
-export const Select: Component<SelectProps> = ({ options = [], placeholder, defaultOption, disabled = false }) => {
+export const Select: Component<SelectProps> = ({
+	options = [],
+	placeholder,
+	defaultOption,
+	disabled = false,
+	onSelect,
+	onChange,
+	onBlur
+}) => {
 	const [getOpen, setOpen] = createSignal(false);
 	const [getSelectedOption, setSelectedOption] = createSignal(defaultOption)
 
 	const handleOptionSelect = (option: string) => {
 		setSelectedOption(option);
+		onSelect?.(option);
+		onChange?.(option);
 		setOpen(false);
 	}
 
@@ -110,11 +141,11 @@ export const Select: Component<SelectProps> = ({ options = [], placeholder, defa
 				onClick={handleClick}
 				className="select"
 				classList={{ 'selected': getOpen(), 'disabled': disabled }}
-				//@ts-ignore
-				use:clickOutside={() => setOpen(false)}
+				// @ts-ignore
+				use:clickOutside={() => { setOpen(false); onBlur?.(getSelectedOption()); }}
 			>
 				<Show when={getSelectedOption()} fallback={() => <SelectPlaceholder>{placeholder}</SelectPlaceholder>}>
-					{getSelectedOption()}
+					{options.find(item => item.value === getSelectedOption())?.label}
 				</Show>
 				<Show
 					when={getOpen()}
@@ -124,10 +155,18 @@ export const Select: Component<SelectProps> = ({ options = [], placeholder, defa
 				</Show>
 			</div>
 			<Show when={getOpen()}>
-				<OptionsList>
+				<OptionsList >
 					<For each={options}>{option => (
-						<OptionListItem onClick={() => handleOptionSelect(option)} selected={option === getSelectedOption()}>
-							{option}
+						<OptionListItem
+							onClick={() => {
+								if (option.disabled) return;
+
+								handleOptionSelect(option.value)
+							}}
+							selected={option.value === getSelectedOption()}
+							disabled={option.disabled}
+						>
+							{option.label}
 						</OptionListItem>
 					)}</For>
 				</OptionsList>

@@ -1,40 +1,52 @@
 # Select component
 
-![skeleton only](https://img.shields.io/badge/skeleton%20only-not%20fully%20functional-yellow)
-
 ### Usage
 
 ```jsx
 import { Select } from '@specialdoom/solid-rev-kit';
 
-const Container = () => (
-  <>
-    <Select options={['Item 1', 'Item 2', 'Item 3']} />
-    <Select
-      options={['Item 1', 'Item 2', 'Item 3']}
-      placeholder="Select placeholder"
-    />
-    <Select options={['Item 1', 'Item 2', 'Item 3']} defaultOption="Item 1" />
-    <Select options={['Item 1', 'Item 2', 'Item 3']} disabled />
-    <Select
-      options={['Item 1', 'Item 2', 'Item 3']}
-      placeholder="Select disabled placeholder"
-      disabled
-    />
-    <Select
-      options={['Item 1', 'Item 2', 'Item 3']}
-      defaultOption="Item 1"
-      disabled
-    />
-  </>
-);
+const Container = () => {
+  const selectOptions = [
+    {
+      label: '🥭 Mango',
+      value: 'Mango'
+    },
+    {
+      label: '🍊 Orange',
+      value: 'Orange'
+    },
+    {
+      label: '🍎 Apple',
+      value: 'Apple',
+      disabled: true
+    }
+  ];
+
+  return (
+    <>
+      <Select options={selectOptions} />
+      <Select options={selectOptions} placeholder="Select placeholder" />
+      <Select options={selectOptions} defaultOption="Mango" />
+      <Select options={selectOptions} disabled />
+      <Select
+        options={selectOptions}
+        placeholder="Select disabled placeholder"
+        disabled
+      />
+      <Select options={selectOptions} defaultOption="Mango" disabled />
+    </>
+  );
+};
 ```
 
 ### API
 
-| Property      | Description                                                    | Type     | Default   |
-| ------------- | -------------------------------------------------------------- | -------- | --------- |
-| options       | Options of select component                                    | string[] | []        |
-| placeholder   | Placeholder of select component                                | string   | undefined |
-| defaultOption | Default option of select component. Element from options array | string   | undefined |
-| disabled      | Whether the select component is disabled                       | boolean  | false     |
+| Property      | Description                                                    | Type                                           | Default   |
+| ------------- | -------------------------------------------------------------- | ---------------------------------------------- | --------- |
+| options       | Options of select component                                    | [SelectOption](https://tinyurl.com/3vmvxxsh)[] | []        |
+| placeholder   | Placeholder of select component                                | string                                         | undefined |
+| defaultOption | Default option of select component. Element from options array | string                                         | undefined |
+| disabled      | Whether the select component is disabled                       | boolean                                        | false     |
+| onSelect      | Select option event handler                                    | (value: string) => void                        | undefined |
+| onChange      | Change option event handler                                    | (value: string) => void                        | undefined |
+| onBlur        | Blur event handler                                             | (value: string) => void                        | undefined |
