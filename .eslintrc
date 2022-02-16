@@ -12,6 +12,8 @@
   "rules": {
     "no-console": 1,
     "quotes": [1, "single"],
-    "semi": [1, "always"]
+    "semi": [1, "always"],
+    "@typescript-eslint/ban-ts-comment": [1],
+    "no-useless-escape": [1]
   }
 }

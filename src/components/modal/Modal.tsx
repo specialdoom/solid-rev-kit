@@ -20,9 +20,10 @@ const ModalWrap = styled('div')`
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 5;
+  z-index: 3;
   overflow: auto;
   outline: 0;
+	background: rgba(113, 145, 180, 0.6);
 `;
 
 const ModalDialog = styled('div')`
@@ -33,7 +34,7 @@ const ModalDialog = styled('div')`
   line-height: 1.5;
   position: relative;
   top: 100px;
-  z-index: 6;
+  z-index: 4;
   max-width: 500px;
   width: auto;
   margin: 0 auto;

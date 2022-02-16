@@ -15,7 +15,7 @@ export interface FillCardProps {
 const isValidUrl = (_string: string) => {
 	const matchPattern = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/;
 	return matchPattern.test(_string);
-}
+};
 
 const StyledCard = styled('div') <{ background: string, color: string, small: boolean }>`
 	position: relative;
