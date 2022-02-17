@@ -12,11 +12,12 @@ export default defineConfig({
     },
     target: 'esnext',
     rollupOptions: {
-      external: ['solid-js', 'solid-styled-components'],
+      external: ['solid-js', 'solid-styled-components', 'tippyJs'],
       output: {
         globals: {
           ['solid-js']: 'solidJs',
-          ['solid-styled-components']: 'solidStyledComponents'
+          ['solid-styled-components']: 'solidStyledComponents',
+          ['tippy.js']: 'tippyJs'
         }
       }
     }
