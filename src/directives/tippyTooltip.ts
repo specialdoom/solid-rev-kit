@@ -4,17 +4,18 @@ import tippy, { Content, Placement } from 'tippy.js';
 export interface TippyTooltipDirectiveProps {
 	content: Content,
 	theme: string,
-	placement: Placement
+	placement: Placement,
+	trigger: string
 }
 
 export const tippyTooltip = (el: HTMLElement, tooltipProps: Accessor<TippyTooltipDirectiveProps>) => {
-	const tippyProps = tooltipProps();
+	const { content, placement, theme, trigger } = tooltipProps();
 
 	tippy(el, {
-		content: tippyProps.content,
-		placement: tippyProps.placement,
-		theme: tippyProps.theme,
-		trigger: 'click',
+		content,
+		placement,
+		theme,
+		trigger,
 		arrow: true
 	});
 }
