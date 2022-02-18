@@ -30,8 +30,8 @@ const Container = () => (
   <>
     <Avatar.Meg />
     <Avatar.Meg round />
-    <Avatar.Mike />
-    <Avatar.Mike round />
+    <Avatar.Jake />
+    <Avatar.Jake round />
     <Avatar.Steven />
     <Avatar.Steven round />
     <Avatar.Mili />
