@@ -16,6 +16,7 @@ import { Space } from './src/components/space';
 import { Switch } from './src/components/switch';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
+import { Tooltip } from './src/components/tooltip/Tooltip';
 
 // constants
 import { theme } from './src/components/themeProvider/theme';
@@ -38,6 +39,7 @@ export {
 	Switch,
 	Tag,
 	TextArea,
+	Tooltip,
 	Typography
 };
 

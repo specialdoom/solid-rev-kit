@@ -1,4 +1,5 @@
 import { createGlobalStyles } from 'solid-styled-components';
+import { TooltipStyle } from '../tooltip/TooltipStyle';
 
 export const GlobalStyle = createGlobalStyles`
 	@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans');
@@ -18,4 +19,6 @@ export const GlobalStyle = createGlobalStyles`
 	body {
 		background-color: #ebf4f8;
 	}
+
+	${TooltipStyle}	
 `;

@@ -1,9 +1,7 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint"
-  ],
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -14,6 +12,8 @@
     "quotes": [1, "single"],
     "semi": [1, "always"],
     "@typescript-eslint/ban-ts-comment": [1],
+    "@typescript-eslint/no-empty-function": [1],
+    "@typescript-eslint/no-namespace": [1],
     "no-useless-escape": [1]
   }
 }
