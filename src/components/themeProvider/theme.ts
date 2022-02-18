@@ -10,6 +10,8 @@ export type Colors = {
 	shade: string
 	tint: string
 	dark: string
+	strawberry: string
+	blueberry: string
 }
 
 export type Theme = {
@@ -28,6 +30,8 @@ export const theme: Theme = {
 		bright: '#FFFFFF',
 		shade: '#DBE2EA',
 		tint: '#EBF4F8',
-		dark: '#2C2738'
+		dark: '#2C2738',
+		strawberry: '#FF5689',
+		blueberry: '#6F96FF'
 	}
 };

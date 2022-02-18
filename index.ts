@@ -4,6 +4,7 @@ import { Avatar } from './src/components/avatar';
 import { Button } from './src/components/button';
 import { Callout } from './src/components/callout';
 import { Card } from './src/components/card';
+import { ChatBubble } from './src/components/chat-bubble';
 import { Counter } from './src/components/counter';
 import { Typography } from './src/components/typography';
 import { Icons } from './src/components/icons';
@@ -27,6 +28,7 @@ export {
 	Button,
 	Callout,
 	Card,
+	ChatBubble,
 	Counter,
 	Icons,
 	Input,
