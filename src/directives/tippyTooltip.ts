@@ -13,6 +13,8 @@ export const tippyTooltip = (el: HTMLElement, tooltipProps: Accessor<TippyToolti
 	tippy(el, {
 		content: tippyProps.content,
 		placement: tippyProps.placement,
-		theme: tippyProps.theme
+		theme: tippyProps.theme,
+		trigger: 'click',
+		arrow: true
 	});
 }
