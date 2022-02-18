@@ -10,8 +10,7 @@ export interface TooltipProps {
 	trigger?: string;
 }
 
-
-export const Tooltip: Component<TooltipProps> = ({ title, type = 'dark', placement = 'auto', trigger = 'mouseenter focus', children }) => (
+export const Tooltip: Component<TooltipProps> = ({ title, type = 'dark', placement = 'auto', trigger = 'mouseenter', children }) => (
 	<span use:tippyTooltip={{ content: title, theme: type, placement, trigger }}>
 		{children}
 	</span>
