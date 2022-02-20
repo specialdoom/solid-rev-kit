@@ -72,7 +72,7 @@ export const Switch: Component<SwitchProps> = ({ disabled = false, checked = fal
 		if (disabled) return;
 
 		setChecked(v => !v);
-	}
+	};
 
 	return (
 		<StyledButton onClick={updateChecked}>

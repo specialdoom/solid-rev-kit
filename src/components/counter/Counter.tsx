@@ -83,9 +83,9 @@ export const Counter: Component<CounterProps> = ({ value = 0, disabled, maxValue
 			e.target.value = e.target.value.slice(0, -1);
 		}
 		//@ts-ignore
-		setValue(Number(e.target.value) ?? 0)
+		setValue(Number(e.target.value) ?? 0);
 		onInput?.(e);
-	}
+	};
 
 	const incremenet = () => setValue(v => v + 1);
 

@@ -1,4 +1,4 @@
-import { Component, mergeProps } from 'solid-js';
+import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
 
 export type ChatBubbleType = 'bright' | 'dark' | 'blueberry' | 'strawberry';
@@ -13,7 +13,7 @@ const arrowColorTypeMap = {
 	['dark']: '#585364',
 	['blueberry']: '#4874E9',
 	['strawberry']: '#DF3468',
-}
+};
 
 const getArrowColorByTypeMap = (type: ChatBubbleType) => arrowColorTypeMap[type] ?? '#585364';
 

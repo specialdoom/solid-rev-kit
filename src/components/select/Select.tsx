@@ -1,4 +1,4 @@
-import { Component, createSignal, For, onCleanup, Show } from 'solid-js';
+import { Component, createSignal, For, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { clickOutside, useDirective } from '../../directives';
@@ -116,20 +116,20 @@ export const Select: Component<SelectProps> = ({
 	onBlur
 }) => {
 	const [getOpen, setOpen] = createSignal(false);
-	const [getSelectedOption, setSelectedOption] = createSignal(defaultOption)
+	const [getSelectedOption, setSelectedOption] = createSignal(defaultOption);
 
 	const handleOptionSelect = (option: string) => {
 		setSelectedOption(option);
 		onSelect?.(option);
 		onChange?.(option);
 		setOpen(false);
-	}
+	};
 
 	const handleClick = () => {
 		if (disabled) return;
 
 		setOpen(v => !v);
-	}
+	};
 
 	return (
 		<SelectContainer>
@@ -157,7 +157,7 @@ export const Select: Component<SelectProps> = ({
 							onClick={() => {
 								if (option.disabled) return;
 
-								handleOptionSelect(option.value)
+								handleOptionSelect(option.value);
 							}}
 							selected={option.value === getSelectedOption()}
 							disabled={option.disabled}

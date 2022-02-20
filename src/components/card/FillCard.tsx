@@ -144,4 +144,4 @@ export const FillCard: Component<FillCardProps> = ({
 			</CardDetails>
 		</StyledCard>
 	);
-}
+};

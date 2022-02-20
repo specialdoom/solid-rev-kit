@@ -6,7 +6,7 @@ const Typography = Object.assign({}, {
 	Heading,
 	Label,
 	Paragraph
-})
+});
 
 export { Typography };
 export type { HeadingProps, ParagraphProps, LabelProps };

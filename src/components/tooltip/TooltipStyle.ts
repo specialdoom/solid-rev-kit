@@ -30,7 +30,7 @@ const generateTypes = () => {
 	}
 
 	return types;
-}
+};
 
 export const TooltipStyle = `
 	.tippy-box[data-animation="fade"][data-state="hidden"] {

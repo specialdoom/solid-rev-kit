@@ -1,7 +1,7 @@
 import { clickOutside } from './clickOutside';
 import { tippyTooltip, TippyTooltipDirectiveProps } from './tippyTooltip';
 
-declare module "solid-js" {
+declare module 'solid-js' {
 	namespace JSX {
 		interface Directives {
 			tippyTooltip: TippyTooltipDirectiveProps,
@@ -10,6 +10,6 @@ declare module "solid-js" {
 	}
 }
 
-export const useDirective = (_directive: any) => { };
+export const useDirective = (_: any) => { };
 
 export { tippyTooltip, clickOutside };

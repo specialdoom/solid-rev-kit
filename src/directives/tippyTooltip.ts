@@ -18,4 +18,4 @@ export const tippyTooltip = (el: HTMLElement, tooltipProps: Accessor<TippyToolti
 		trigger,
 		arrow: true
 	});
-}
+};
