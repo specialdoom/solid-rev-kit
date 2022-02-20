@@ -1,6 +1,9 @@
 import { Component, createSignal, For, onCleanup, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
+import { clickOutside, useDirective } from '../../directives';
+
+useDirective(clickOutside);
 
 const { ChevronLeft, ChevronDown } = Icons;
 
@@ -102,13 +105,6 @@ const OptionListItem = styled('div') <{
 		}
 	` : ''}
 `;
-
-const clickOutside = (el: any, accessor: any) => {
-	const onClick = (e: any) => !el.contains(e.target) && accessor()?.();
-	document.body.addEventListener("click", onClick);
-
-	onCleanup(() => document.body.removeEventListener("click", onClick));
-}
 
 export const Select: Component<SelectProps> = ({
 	options = [],
