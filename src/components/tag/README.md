@@ -25,3 +25,4 @@ const Container = () => (
 | -------- | ----------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
 | type     | Type of tag component. Options: 'accent', 'error', 'warning', 'success', 'dark', 'bright' | string                                       | 'accent' |
 | color    | Text color                                                                                | keyof [Colors](https://tinyurl.com/2p97bv3t) | 'bright' |
+| closable | Whether the tag component can be closed                                                   | boolean                                      | false    |
