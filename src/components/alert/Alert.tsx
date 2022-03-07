@@ -6,7 +6,7 @@ import { Typography } from '../typography';
 
 const { Cross } = Icons;
 
-type AlertType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
+export type AlertType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
 
 export interface AlertProps {
 	type?: AlertType
@@ -42,13 +42,14 @@ const StyledAlert = styled('div') <{
 export const Alert: Component<AlertProps> = ({
 	type = 'accent',
 	color = 'bright',
-	children
+	children,
+	...rest
 }) => {
 	const [getClosed, setClosed] = createSignal(false);
 
 	return (
 		<Show when={!getClosed()}>
-			<StyledAlert type={type} color={color}>
+			<StyledAlert type={type} color={color} {...rest}>
 				<Typography.Paragraph type={color}>{children}</Typography.Paragraph>
 				<Cross onClick={() => setClosed(true)} />
 			</StyledAlert>
