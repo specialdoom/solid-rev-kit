@@ -14,16 +14,7 @@ describe('Avatar', () => {
 		const avatar = screen.getByTestId('avatar');
 
 		expect(avatar).toBeInTheDocument();
-	})
-
-	it('should render round avatar', () => {
-		renderWithRevKitThemeProvider(() => <Avatar initials='RK' round data-testid='avatar' />);
-
-		const avatar = screen.getByTestId('avatar');
-
-		expect(avatar).toBeInTheDocument();
-		expect(avatar).toHaveAttribute('round');
-	})
+	});
 
 	it('should render a <div> element', () => {
 		renderWithRevKitThemeProvider(() => <Avatar initials='RK' data-testid='avatar' />);
@@ -33,6 +24,14 @@ describe('Avatar', () => {
 		expect(avatar).toBeInstanceOf(HTMLDivElement);
 	});
 
+	it('should render round avatar', () => {
+		renderWithRevKitThemeProvider(() => <Avatar initials='RK' round data-testid='avatar' />);
+
+		const avatar = screen.getByTestId('avatar');
+
+		expect(avatar).toBeInTheDocument();
+		expect(avatar).toHaveAttribute('round');
+	});
 
 	it('should render initials as children', () => {
 		const initials = 'RK';
@@ -42,5 +41,5 @@ describe('Avatar', () => {
 		const avatar = screen.getByTestId('avatar');
 
 		expect(avatar).toHaveTextContent(initials);
-	})
-})
+	});
+});

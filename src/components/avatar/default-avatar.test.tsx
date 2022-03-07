@@ -16,7 +16,7 @@ describe('Default avatar', () => {
 		const defaultAvatar = screen.getByTestId('default-avatar');
 
 		expect(defaultAvatar).toBeInTheDocument();
-	})
+	});
 
 	it('should render steven type by default', () => {
 		renderWithRevKitThemeProvider(() => <DefaultAvatar data-testid='default-avatar' />);
@@ -24,7 +24,7 @@ describe('Default avatar', () => {
 		const defaultAvatar = screen.getByTestId('default-avatar');
 
 		expect(defaultAvatar).toHaveAttribute('type', 'steven');
-	})
+	});
 
 	it('should render round avatar', () => {
 		renderWithRevKitThemeProvider(() => <DefaultAvatar round data-testid='avatar' />);
@@ -32,7 +32,7 @@ describe('Default avatar', () => {
 		const defaultAvatar = screen.getByTestId('avatar');
 
 		expect(defaultAvatar).toHaveAttribute('round');
-	})
+	});
 
 
 	it('should render a <div> element', () => {
@@ -51,6 +51,6 @@ describe('Default avatar', () => {
 			const defaultAvatar = screen.getByTestId('default-avatar');
 
 			expect(defaultAvatar).toHaveAttribute('type', type);
-		})
-	})
-})
+		});
+	});
+});

@@ -1,4 +1,4 @@
-import { Button } from '../button/Button';
+import { Button } from '../button/button';
 import { Space } from '../space/Space';
 import { Accessor, Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';

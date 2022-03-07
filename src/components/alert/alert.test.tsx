@@ -2,7 +2,7 @@ import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
 import { screen, cleanup } from 'solid-testing-library';
 import { Alert, AlertType } from '.';
 
-const alertTypes: AlertType[] = ['accent', 'success', 'warning', 'error', 'dark', 'bright']
+const alertTypes: AlertType[] = ['accent', 'success', 'warning', 'error', 'dark', 'bright'];
 
 describe('Alert', () => {
 	afterEach(() => {
@@ -42,8 +42,8 @@ describe('Alert', () => {
 			const alert = screen.getByTestId('alert');
 
 			expect(alert).toHaveAttribute('type', value);
-		})
-	})
+		});
+	});
 
 	it('should render children', () => {
 		const children = 'Alert';
@@ -53,7 +53,7 @@ describe('Alert', () => {
 		const alert = screen.getByTestId('alert');
 
 		expect(alert).toHaveTextContent(children);
-	})
+	});
 
 	it('should destroy if click on close icon', () => {
 		renderWithRevKitThemeProvider(() => <Alert data-testid='alert'>Closable alert</Alert>);
@@ -65,5 +65,5 @@ describe('Alert', () => {
 		crossIcon.click();
 
 		expect(alert).not.toBeInTheDocument();
-	})
-})
+	});
+});

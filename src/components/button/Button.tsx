@@ -10,7 +10,6 @@ export interface ButtonProps {
 	onClick?: (event: MouseEvent) => void;
 }
 
-
 const StyledButton = styled('button') <{
 	variant: ButtonType;
 	small: boolean;
@@ -94,7 +93,8 @@ export const Button: Component<ButtonProps> = ({
 	disabled = false,
 	small = false,
 	onClick,
-	children
+	children,
+	...rest
 }) => (
 	<StyledButton
 		variant={variant}
@@ -102,6 +102,7 @@ export const Button: Component<ButtonProps> = ({
 		small={small}
 		disabled={disabled}
 		className={`${variant}`}
+		{...rest}
 	>
 		{children}
 	</StyledButton>
