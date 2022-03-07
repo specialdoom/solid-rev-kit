@@ -18,9 +18,10 @@ const StyledAvatar = styled('div') <{
 	background-image: ${props => `url(${getImageUrl(props.type)})`};
 `;
 
-export const DefaultAvatar = ({ type = 'steven', round = false }: DefaultAvatarProps) => (
+export const DefaultAvatar = ({ type = 'steven', round = false, ...rest }: DefaultAvatarProps) => (
 	<StyledAvatar
 		type={type}
 		round={round}
+		{...rest}
 	/>
 );
