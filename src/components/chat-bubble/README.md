@@ -7,7 +7,7 @@ import { ChatBubble } from '@specialdoom/solid-rev-kit';
 
 const Container = () => (
   <>
-    <ChatBubble initials='RK'>Chat message</ChatBubble>
+    <ChatBubble>Chat message</ChatBubble>
   </>
 ```
 
