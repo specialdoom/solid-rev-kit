@@ -21,7 +21,7 @@
     "prebuild": "tsc && eslint . --ext .ts,.tsx",
     "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx",
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm test",
     "test": "jest"
   },
   "license": "MIT",
