@@ -75,7 +75,7 @@ export const Switch: Component<SwitchProps> = ({ disabled = false, checked = fal
 	};
 
 	return (
-		<StyledButton onClick={updateChecked}>
+		<StyledButton onClick={updateChecked} data-testid='switch'>
 			<input type='checkbox' disabled={disabled} checked={getChecked()} {...rest} />
 			<div class='slider'>
 				<div class='toggle'>

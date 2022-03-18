@@ -1,8 +1,13 @@
-import { screen } from 'solid-testing-library';
+import { cleanup, screen } from 'solid-testing-library';
 import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
 import { Space } from './space';
 
 describe('Space', () => {
+	afterEach(() => {
+		jest.clearAllMocks();
+		cleanup();
+	});
+	
 	it('should render', () => {
 		renderWithRevKitThemeProvider(() => (
 			<Space><div>1</div><div>2</div></Space>
