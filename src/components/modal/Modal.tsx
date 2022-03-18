@@ -1,5 +1,5 @@
 import { Button } from '../button/button';
-import { Space } from '../space/Space';
+import { Space } from '../space';
 import { Accessor, Component, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Typography } from '../typography';

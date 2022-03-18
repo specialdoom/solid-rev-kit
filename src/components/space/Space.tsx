@@ -6,4 +6,4 @@ const StyledSpace = styled('div')`
   gap: 8px;
 `;
 
-export const Space: Component = ({ children }) => <StyledSpace>{children}</StyledSpace>;
+export const Space: Component = ({ children }) => <StyledSpace data-testid='space'>{children}</StyledSpace>;
