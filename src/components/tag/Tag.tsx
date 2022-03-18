@@ -3,8 +3,7 @@ import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { Colors } from '../themeProvider/theme';
 
-type TagType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
-
+export type TagType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
 
 export interface TagProps {
 	type?: TagType;
@@ -52,6 +51,7 @@ export const Tag: Component<TagProps> = ({
 			<StyledTag
 				type={type}
 				color={color}
+				data-testid='tag'
 			>
 				{children}
 				<Show when={closable}>
