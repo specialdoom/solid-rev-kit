@@ -9,7 +9,7 @@ describe('Avatar', () => {
 	});
 
 	it('should render', () => {
-		renderWithRevKitThemeProvider(() => <Avatar initials='RK' data-testid='avatar' />);
+		renderWithRevKitThemeProvider(() => <Avatar initials='RK' />);
 
 		const avatar = screen.getByTestId('avatar');
 
@@ -17,7 +17,7 @@ describe('Avatar', () => {
 	});
 
 	it('should render a <div> element', () => {
-		renderWithRevKitThemeProvider(() => <Avatar initials='RK' data-testid='avatar' />);
+		renderWithRevKitThemeProvider(() => <Avatar initials='RK' />);
 
 		const avatar = screen.getByTestId('avatar');
 
@@ -25,7 +25,7 @@ describe('Avatar', () => {
 	});
 
 	it('should render round avatar', () => {
-		renderWithRevKitThemeProvider(() => <Avatar initials='RK' round data-testid='avatar' />);
+		renderWithRevKitThemeProvider(() => <Avatar initials='RK' round />);
 
 		const avatar = screen.getByTestId('avatar');
 
@@ -36,7 +36,7 @@ describe('Avatar', () => {
 	it('should render initials as children', () => {
 		const initials = 'RK';
 
-		renderWithRevKitThemeProvider(() => <Avatar initials={initials} round data-testid='avatar' />);
+		renderWithRevKitThemeProvider(() => <Avatar initials={initials} round />);
 
 		const avatar = screen.getByTestId('avatar');
 

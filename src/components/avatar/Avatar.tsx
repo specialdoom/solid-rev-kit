@@ -22,7 +22,7 @@ const StyledAvatar = styled('div') <{
 `;
 
 export const Avatar: Component<AvatarProps> = ({ initials, round = false, ...rest }) => (
-  <StyledAvatar round={round} {...rest}>
+  <StyledAvatar round={round} data-testid='avatar'>
     {initials}
   </StyledAvatar>
 );

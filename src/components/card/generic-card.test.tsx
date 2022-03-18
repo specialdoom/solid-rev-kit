@@ -14,7 +14,6 @@ describe('GenericCard', () => {
 				imageSrc='image_source'
 				title='Card title'
 				actions={[<button>Action</button>]}
-				data-testid='generic-card'
 			>
 				Supporting description for the card goes here like a breeze.
 			</GenericCard>
@@ -31,7 +30,6 @@ describe('GenericCard', () => {
 				imageSrc='image_source'
 				title='Card title'
 				actions={[<button>Action</button>]}
-				data-testid='generic-card'
 			>
 				Supporting description for the card goes here like a breeze.
 			</GenericCard>
@@ -48,7 +46,6 @@ describe('GenericCard', () => {
 				imageSrc='image_source'
 				title='Card title'
 				actions={[<button>Action</button>]}
-				data-testid='generic-card'
 			>
 				Supporting description for the card goes here like a breeze.
 			</GenericCard>
@@ -65,7 +62,6 @@ describe('GenericCard', () => {
 			<GenericCard
 				title='Card title'
 				actions={[<button>Action</button>]}
-				data-testid='generic-card'
 			>
 				Supporting description for the card goes here like a breeze.
 			</GenericCard>
@@ -83,7 +79,6 @@ describe('GenericCard', () => {
 			<GenericCard
 				title={title}
 				actions={[<button>Action</button>]}
-				data-testid='generic-card'
 			>
 				Supporting description for the card goes here like a breeze.
 			</GenericCard>

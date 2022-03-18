@@ -42,14 +42,13 @@ const StyledAlert = styled('div') <{
 export const Alert: Component<AlertProps> = ({
 	type = 'accent',
 	color = 'bright',
-	children,
-	...rest
+	children
 }) => {
 	const [getClosed, setClosed] = createSignal(false);
 
 	return (
 		<Show when={!getClosed()}>
-			<StyledAlert type={type} color={color} {...rest}>
+			<StyledAlert type={type} color={color} data-testid='alert'>
 				<Typography.Paragraph type={color}>{children}</Typography.Paragraph>
 				<Cross onClick={() => setClosed(true)} />
 			</StyledAlert>

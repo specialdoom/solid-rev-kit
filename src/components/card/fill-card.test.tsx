@@ -10,7 +10,7 @@ describe('FillCard', () => {
 
 	it('should render', () => {
 		renderWithRevKitThemeProvider(() => (
-			<FillCard background="#0880AE" label="Label" title="Card title" data-testid='fill-card'>
+			<FillCard background="#0880AE" label="Label" title="Card title">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			</FillCard>
 		));
@@ -22,7 +22,7 @@ describe('FillCard', () => {
 
 	it('should render a <div> element', () => {
 		renderWithRevKitThemeProvider(() => (
-			<FillCard background="#0880AE" label="Label" title="Card title" data-testid='fill-card'>
+			<FillCard background="#0880AE" label="Label" title="Card title">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			</FillCard>
 		));
@@ -34,7 +34,7 @@ describe('FillCard', () => {
 
 	it('should have background and color', () => {
 		renderWithRevKitThemeProvider(() => (
-			<FillCard background='#0880AE' label="Label" title="Card title" data-testid='fill-card'>
+			<FillCard background='#0880AE' label="Label" title="Card title">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			</FillCard>
 		));
@@ -47,7 +47,7 @@ describe('FillCard', () => {
 
 	it('should render more icons if there are actions', () => {
 		renderWithRevKitThemeProvider(() => (
-			<FillCard background='#0880AE' label="Label" title="Card title" data-testid='fill-card' actions={[
+			<FillCard background='#0880AE' label="Label" title="Card title" actions={[
 				{
 					label: 'Share',
 					onClick: () => alert('share'),
@@ -57,14 +57,14 @@ describe('FillCard', () => {
 			</FillCard>
 		));
 
-		const moreIcon = screen.getByTitle('more icon');
+		const moreIcon = screen.getByTestId('more-icon');
 
 		expect(moreIcon).toBeInTheDocument();
 	})
 
 	it('should render small', () => {
 		renderWithRevKitThemeProvider(() => (
-			<FillCard background="#0880AE" label="Label" title="Card title" small data-testid='fill-card'>
+			<FillCard background="#0880AE" label="Label" title="Card title" small>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			</FillCard>
 		));

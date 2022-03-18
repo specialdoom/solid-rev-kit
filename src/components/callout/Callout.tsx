@@ -45,7 +45,7 @@ const StyledLargeCallout = styled('div')`
 `;
 
 const SmallCallout: Component<CalloutProps> = ({ description, actions, ...rest }) => (
-	<StyledSmallCallout {...rest}>
+	<StyledSmallCallout data-testid='small-callout'>
 		<Typography.Heading size={6}>{description}</Typography.Heading>
 		<ActionsContainer small>
 			<For each={actions}>{action => action}</For>
@@ -55,9 +55,9 @@ const SmallCallout: Component<CalloutProps> = ({ description, actions, ...rest }
 
 export const Callout: Component<CalloutProps> = ({ title, description, actions, small = false, ...rest }) => (
 	<Show when={!small}
-		fallback={() => <SmallCallout description={description} actions={actions} {...rest} />}
+		fallback={() => <SmallCallout description={description} actions={actions} />}
 	>
-		<StyledLargeCallout {...rest}>
+		<StyledLargeCallout data-testid='callout'>
 			<Typography.Heading size={4}>{title}</Typography.Heading>
 			<Typography.Paragraph>{description}</Typography.Paragraph>
 			<ActionsContainer small={small}>

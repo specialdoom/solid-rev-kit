@@ -11,7 +11,7 @@ describe('ChatBubble', () => {
 	});
 
 	it('should render', () => {
-		renderWithRevKitThemeProvider(() => <ChatBubble data-testid='chat-bubble'>Chat message</ChatBubble>);
+		renderWithRevKitThemeProvider(() => <ChatBubble>Chat message</ChatBubble>);
 
 		const chatBubble = screen.getByTestId('chat-bubble');
 
@@ -19,7 +19,7 @@ describe('ChatBubble', () => {
 	});
 
 	it('should render a <div> element', () => {
-		renderWithRevKitThemeProvider(() => <ChatBubble data-testid='chat-bubble'>Chat message</ChatBubble>);
+		renderWithRevKitThemeProvider(() => <ChatBubble>Chat message</ChatBubble>);
 
 		const chatBubble = screen.getByTestId('chat-bubble');
 
@@ -28,7 +28,7 @@ describe('ChatBubble', () => {
 
 	it('should render chat message as children', () => {
 		const children = 'Chat message';
-		renderWithRevKitThemeProvider(() => <ChatBubble data-testid='chat-bubble'>{children}</ChatBubble>);
+		renderWithRevKitThemeProvider(() => <ChatBubble>{children}</ChatBubble>);
 
 		const chatBubble = screen.getByTestId('chat-bubble');
 
@@ -37,7 +37,7 @@ describe('ChatBubble', () => {
 
 	chatBubbleTypes.forEach(type => {
 		it(`should render ${type} type alert`, () => {
-			renderWithRevKitThemeProvider(() => <ChatBubble data-testid='chat-bubble' type={type}>Chat message</ChatBubble>);
+			renderWithRevKitThemeProvider(() => <ChatBubble type={type}>Chat message</ChatBubble>);
 
 			const chatBubble = screen.getByTestId('chat-bubble');
 
@@ -48,7 +48,7 @@ describe('ChatBubble', () => {
 	it('should have placement attribue', () => {
 		const placement = 'top-left';
 
-		renderWithRevKitThemeProvider(() => <ChatBubble data-testid='chat-bubble' placement={placement}>Chat message</ChatBubble>);
+		renderWithRevKitThemeProvider(() => <ChatBubble placement={placement}>Chat message</ChatBubble>);
 
 		const chatBubble = screen.getByTestId('chat-bubble');
 

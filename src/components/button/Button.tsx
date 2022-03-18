@@ -93,8 +93,7 @@ export const Button: Component<ButtonProps> = ({
 	disabled = false,
 	small = false,
 	onClick,
-	children,
-	...rest
+	children
 }) => (
 	<StyledButton
 		variant={variant}
@@ -102,7 +101,7 @@ export const Button: Component<ButtonProps> = ({
 		small={small}
 		disabled={disabled}
 		className={`${variant}`}
-		{...rest}
+		data-testid='button'
 	>
 		{children}
 	</StyledButton>

@@ -9,7 +9,7 @@ describe('Callout', () => {
 	});
 
 	it('should render', () => {
-		renderWithRevKitThemeProvider(() => <Callout description='description' data-testid='callout'></Callout>);
+		renderWithRevKitThemeProvider(() => <Callout description='description'></Callout>);
 
 		const callout = screen.getByTestId('callout');
 
@@ -17,7 +17,7 @@ describe('Callout', () => {
 	})
 
 	it('should render a <div> element', () => {
-		renderWithRevKitThemeProvider(() => <Callout description='description' data-testid='callout'></Callout>);
+		renderWithRevKitThemeProvider(() => <Callout description='description'></Callout>);
 
 		const callout = screen.getByTestId('callout');
 
@@ -27,17 +27,17 @@ describe('Callout', () => {
 	it('should render small callout', () => {
 		const description = 'description';
 
-		renderWithRevKitThemeProvider(() => <Callout description={description} small data-testid='callout'></Callout>);
+		renderWithRevKitThemeProvider(() => <Callout description={description} small></Callout>);
 
-		const callout = screen.getByTestId('callout');
+		const callout = screen.getByTestId('small-callout');
 
-		expect(callout).not.toContainHTML(`<p>${description}</p>`);
+		expect(callout).toBeInTheDocument();
 	})
 
 	it('should contain actions', () => {
 		renderWithRevKitThemeProvider(() => <Callout description='description' actions={[
 			<button>Action</button>,
-		]} data-testid='callout' />);
+		]} />);
 
 		const callout = screen.getByTestId('callout');
 		const actionsContainer = callout.querySelector('div');

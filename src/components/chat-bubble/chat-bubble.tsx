@@ -56,14 +56,13 @@ export const ChatBubble: Component<ChatBubbleProps> = ({
 	type = 'blueberry',
 	placement = 'top-left',
 	children,
-	...rest
 }) => (
 	<StyledBubble
 		type={type}
 		placement={placement}
 		v-position={placement.split('-')[0]}
 		h-position={placement.split('-')[1]}
-		{...rest}
+		data-testid='chat-bubble'
 	>
 		{children}
 	</StyledBubble>
