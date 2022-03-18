@@ -68,7 +68,7 @@ const ModalActions = styled('div')`
 export const Modal: Component<ModalProps> = ({ visible, title, onCancel, onOk, children }) => (
 	<Show when={visible()}>
 		<ModalWrap>
-			<ModalDialog>
+			<ModalDialog data-testid='modal'>
 				<ModalHeader>
 					<Typography.Heading size={5} weight='bold'>{title}</Typography.Heading>
 					<Cross onClick={onCancel} />
