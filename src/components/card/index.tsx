@@ -1,5 +1,5 @@
-import { GenericCard, GenerircCardProps } from './GenericCard';
-import { FillCard, FillCardProps } from './FillCard';
+import { GenericCard, GenerircCardProps } from './generic-card';
+import { FillCard, FillCardProps } from './fill-card';
 
 const Card = Object.assign({}, {
 	Fill: FillCard,

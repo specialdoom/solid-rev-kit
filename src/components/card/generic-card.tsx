@@ -42,8 +42,8 @@ const BodyContainer = styled('div')`
   padding: 8px 0;
 `;
 
-export const GenericCard: Component<GenerircCardProps> = ({ imageSrc, title, children, actions }) => (
-	<StyledCard>
+export const GenericCard: Component<GenerircCardProps> = ({ imageSrc, title, children, actions, ...rest }) => (
+	<StyledCard {...rest}>
 		<Show when={imageSrc}>
 			<Image src={imageSrc} />
 		</Show>
