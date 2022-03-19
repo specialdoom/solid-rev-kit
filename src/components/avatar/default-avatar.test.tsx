@@ -1,8 +1,8 @@
 import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
 import { screen, cleanup } from 'solid-testing-library';
-import { DefaultAvatar } from './default-avatar';
+import { DefaultAvatar, DefaultAvatarType } from './default-avatar';
 
-const defaultAvatarTypes: any[] = ['jake', 'mili', 'meg'];
+const defaultAvatarTypes: DefaultAvatarType[] = ['jake', 'mili', 'meg'];
 
 describe('Default avatar', () => {
 	afterEach(() => {

@@ -39,7 +39,7 @@ describe('Input', () => {
 		const textArea = screen.getByTestId('text-area');
 
 		expect(textArea).toHaveAttribute('rows', rows.toString());
-	})
+	});
 
 	it('should have placeholder attribute', () => {
 		const placeholder = 'Placeholder';
@@ -50,5 +50,5 @@ describe('Input', () => {
 		const textArea = screen.getByTestId('text-area');
 
 		expect(textArea).toHaveAttribute('placeholder', placeholder);
-	})
+	});
 });

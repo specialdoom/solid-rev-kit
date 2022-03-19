@@ -46,4 +46,4 @@ describe('Spinner', () => {
 
 		expect(window.getComputedStyle(spinner).animation).toContain('spin');
 	});
-})
+});

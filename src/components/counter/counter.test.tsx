@@ -16,7 +16,7 @@ describe('Counter', () => {
 		const counter = screen.getByTestId('counter');
 
 		expect(counter).toBeInTheDocument();
-	})
+	});
 
 	it('should render a <div> element', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -26,7 +26,7 @@ describe('Counter', () => {
 		const counter = screen.getByTestId('counter');
 
 		expect(counter).toBeInstanceOf(HTMLDivElement);
-	})
+	});
 
 	it('should render value inside input', () => {
 		const value = 1;
@@ -38,7 +38,7 @@ describe('Counter', () => {
 		const input = counter.querySelector('input');
 
 		expect(input?.value).toBe(value.toString());
-	})
+	});
 
 	it('should increment value inside input on plus click', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -52,7 +52,7 @@ describe('Counter', () => {
 		expect(input?.value).toBe('1');
 		plusIcon.click();
 		expect(input?.value).toBe('2');
-	})
+	});
 
 	it('should decrement value inside input on minus click', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -66,7 +66,7 @@ describe('Counter', () => {
 		expect(input?.value).toBe('1');
 		minusIcon.click();
 		expect(input?.value).toBe('0');
-	})
+	});
 
 	it('should disable plus button if maxValue is reached', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -82,7 +82,7 @@ describe('Counter', () => {
 		expect(input?.value).toBe('2');
 		plusIcon.click();
 		expect(input?.value).toBe('2');
-	})
+	});
 
 	it('should disable minus button if minValue is reached', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -102,5 +102,5 @@ describe('Counter', () => {
 		expect(input?.value).toBe('-2');
 		minusIcon.click();
 		expect(input?.value).toBe('-2');
-	})
+	});
 });

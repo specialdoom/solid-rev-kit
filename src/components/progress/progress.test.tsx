@@ -37,7 +37,7 @@ describe('Progress', () => {
 		const progress = screen.getByTestId('progress');
 
 		expect(progress).toHaveAttribute('type', type);
-	})
+	});
 
 	it('should be loading', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -47,7 +47,7 @@ describe('Progress', () => {
 		const progress = screen.getByTestId('progress');
 
 		expect(progress).toHaveAttribute('loading', 'true');
-	})
+	});
 
 	it('should have percent attribute', () => {
 		const percent = 20;
@@ -58,5 +58,5 @@ describe('Progress', () => {
 		const progress = screen.getByTestId('progress');
 
 		expect(progress).toHaveAttribute('percent', '20');
-	})
+	});
 });

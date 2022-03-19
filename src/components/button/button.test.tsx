@@ -62,6 +62,7 @@ describe('Button', () => {
 
 	it('should fire onClick event handler', () => {
 		jest.spyOn(window, 'alert').mockImplementation(() => { });
+
 		const onClickHandler = () => alert('something');
 		renderWithRevKitThemeProvider(() => <Button onClick={onClickHandler}>Button</Button>);
 

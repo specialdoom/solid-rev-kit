@@ -65,4 +65,4 @@ describe('Switch', () => {
 
 		expect(switchInput?.disabled).toBe(true);
 	});
-})
+});

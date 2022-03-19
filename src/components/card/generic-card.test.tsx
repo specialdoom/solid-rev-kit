@@ -22,7 +22,7 @@ describe('GenericCard', () => {
 		const genericCard = screen.getByTestId('generic-card');
 
 		expect(genericCard).toBeInTheDocument();
-	})
+	});
 
 	it('should render a <div> element', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -38,7 +38,7 @@ describe('GenericCard', () => {
 		const genericCard = screen.getByTestId('generic-card');
 
 		expect(genericCard).toBeInstanceOf(HTMLDivElement);
-	})
+	});
 
 	it('should render image container when imageSrc valid', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -55,7 +55,7 @@ describe('GenericCard', () => {
 		const divs = genericCard.querySelectorAll('div');
 
 		expect(divs.length).toBe(3);
-	})
+	});
 
 	it('should not render image container when imageSrc is invalid', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -71,7 +71,7 @@ describe('GenericCard', () => {
 		const divs = genericCard.querySelectorAll('div');
 
 		expect(divs.length).toBe(2);
-	})
+	});
 
 	it('should render title', () => {
 		const title = 'Card title';
@@ -88,5 +88,5 @@ describe('GenericCard', () => {
 		const heading = genericCard.querySelector('h1');
 
 		expect(heading?.innerHTML).toBe(title);
-	})
+	});
 });

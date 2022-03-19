@@ -1,5 +1,5 @@
 import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
-import { screen, cleanup, render } from 'solid-testing-library';
+import { screen, cleanup } from 'solid-testing-library';
 import { Callout } from './callout';
 
 describe('Callout', () => {
@@ -14,7 +14,7 @@ describe('Callout', () => {
 		const callout = screen.getByTestId('callout');
 
 		expect(callout).toBeInTheDocument();
-	})
+	});
 
 	it('should render a <div> element', () => {
 		renderWithRevKitThemeProvider(() => <Callout description='description'></Callout>);
@@ -22,7 +22,7 @@ describe('Callout', () => {
 		const callout = screen.getByTestId('callout');
 
 		expect(callout).toBeInstanceOf(HTMLDivElement);
-	})
+	});
 
 	it('should render small callout', () => {
 		const description = 'description';
@@ -32,7 +32,7 @@ describe('Callout', () => {
 		const callout = screen.getByTestId('small-callout');
 
 		expect(callout).toBeInTheDocument();
-	})
+	});
 
 	it('should contain actions', () => {
 		renderWithRevKitThemeProvider(() => <Callout description='description' actions={[
@@ -43,5 +43,5 @@ describe('Callout', () => {
 		const actionsContainer = callout.querySelector('div');
 
 		expect(actionsContainer).toContainHTML('<button>Action</button>');
-	})
+	});
 });

@@ -36,5 +36,5 @@ describe('Space', () => {
 		const space = screen.getByTestId('space');
 
 		expect(window.getComputedStyle(space).gap).toBe('8px');
-	})
-})
+	});
+});

@@ -1,7 +1,9 @@
 import { styled } from 'solid-styled-components';
 
+export type DefaultAvatarType = 'steven' | 'meg' | 'jake' | 'mili'
+
 export interface DefaultAvatarProps {
-	type?: 'steven' | 'meg' | 'jake' | 'mili';
+	type?: DefaultAvatarType;
 	round?: boolean;
 }
 

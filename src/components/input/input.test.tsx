@@ -41,7 +41,7 @@ describe('Input', () => {
 		const inputElement = input.querySelector('input');
 
 		expect(inputElement).toHaveAttribute('placeholder', placeholder);
-	})
+	});
 
 	it('should render icon', () => {
 		renderWithRevKitThemeProvider(() => (
@@ -52,5 +52,5 @@ describe('Input', () => {
 		const icon = screen.getByTestId('lens-icon');
 
 		expect(input).toContainElement(icon);
-	})
+	});
 });
