@@ -20,7 +20,6 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx",
-    "prepublish": "npm run build && npm test",
     "test": "jest"
   },
   "license": "MIT",
