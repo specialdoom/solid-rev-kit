@@ -11,13 +11,13 @@ import { Icons } from './src/components/icons';
 import { Input, TextArea } from './src/components/input';
 import { Modal } from './src/components/modal';
 import { Progress } from './src/components/progress';
-import { RevKitTheme } from './src/components/themeProvider/ThemeProvider';
+import { RevKitTheme } from './src/components/themeProvider/theme-provider';
 import { Select } from './src/components/select';
 import { Space } from './src/components/space';
 import { Switch } from './src/components/switch';
 import { Spinner } from './src/components/spinner';
 import { Tag } from './src/components/tag';
-import { Tooltip } from './src/components/tooltip/Tooltip';
+import { Tooltip } from './src/components/tooltip/tooltip';
 
 // constants
 import { theme } from './src/components/themeProvider/theme';
