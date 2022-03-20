@@ -1,6 +1,6 @@
-import { Heading, HeadingProps } from './Heading';
-import { Label, LabelProps } from './Label';
-import { Paragraph, ParagraphProps } from './Paragraph';
+import { Heading, HeadingProps } from './heading';
+import { Label, LabelProps } from './label';
+import { Paragraph, ParagraphProps } from './paragraph';
 
 const Typography = Object.assign({}, {
 	Heading,
