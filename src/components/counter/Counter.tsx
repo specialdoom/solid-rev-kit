@@ -73,7 +73,14 @@ const ValueInput = styled('input')`
 
 `;
 
-export const Counter: Component<CounterProps> = ({ value = 0, disabled, maxValue = 999, minValue = -999, onInput, ...rest }) => {
+export const Counter: Component<CounterProps> = ({
+	value = 0,
+	disabled,
+	maxValue = 999,
+	minValue = -999,
+	onInput,
+	...rest
+}) => {
 	const [getValue, setValue] = createSignal(value);
 
 	const handleInput = (e: Event) => {
@@ -92,7 +99,7 @@ export const Counter: Component<CounterProps> = ({ value = 0, disabled, maxValue
 	const decrement = () => setValue(v => v - 1);
 
 	return (
-		<CounterContainer disabled={disabled}>
+		<CounterContainer disabled={disabled} data-testid='counter'>
 			<ControlButton onClick={decrement} side='left' disabled={disabled || getValue() === minValue}>
 				<Icons.Minus />
 			</ControlButton>

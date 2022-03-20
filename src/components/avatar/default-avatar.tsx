@@ -1,7 +1,9 @@
 import { styled } from 'solid-styled-components';
 
+export type DefaultAvatarType = 'steven' | 'meg' | 'jake' | 'mili'
+
 export interface DefaultAvatarProps {
-	type?: 'steven' | 'meg' | 'jake' | 'mili';
+	type?: DefaultAvatarType;
 	round?: boolean;
 }
 
@@ -18,9 +20,10 @@ const StyledAvatar = styled('div') <{
 	background-image: ${props => `url(${getImageUrl(props.type)})`};
 `;
 
-export const DefaultAvatar = ({ type = 'steven', round = false }: DefaultAvatarProps) => (
+export const DefaultAvatar = ({ type = 'steven', round = false, ...rest }: DefaultAvatarProps) => (
 	<StyledAvatar
 		type={type}
 		round={round}
+		{...rest}
 	/>
 );

@@ -116,7 +116,7 @@ export const FillCard: Component<FillCardProps> = ({
 	const [getShowActions, setShowActions] = createSignal(false);
 
 	return (
-		<StyledCard background={background} color={color} small={small}>
+		<StyledCard background={background} color={color} small={small} data-testid='fill-card'>
 			<Show when={actions.length > 0}>
 				<ActionsHeader>
 					<span use:clickOutside={() => setShowActions(false)}>

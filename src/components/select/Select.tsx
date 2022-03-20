@@ -132,10 +132,10 @@ export const Select: Component<SelectProps> = ({
 	};
 
 	return (
-		<SelectContainer>
+		<SelectContainer data-testid='select-container'>
 			<div
 				onClick={handleClick}
-				className="select"
+				className='select'
 				classList={{ 'selected': getOpen(), 'disabled': disabled }}
 				// @ts-ignore
 				use:clickOutside={() => { setOpen(false); onBlur?.(getSelectedOption()); }}
@@ -151,7 +151,7 @@ export const Select: Component<SelectProps> = ({
 				</Show>
 			</div>
 			<Show when={getOpen()}>
-				<OptionsList >
+				<OptionsList data-testid='select-options'>
 					<For each={options}>{option => (
 						<OptionListItem
 							onClick={() => {

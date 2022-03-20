@@ -8,15 +8,6 @@ export interface ChatBubbleProps {
 	placement?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 }
 
-const arrowColorTypeMap = {
-	['bright']: '#D5D6D7',
-	['dark']: '#585364',
-	['blueberry']: '#4874E9',
-	['strawberry']: '#DF3468',
-};
-
-const getArrowColorByTypeMap = (type: ChatBubbleType) => arrowColorTypeMap[type] ?? '#585364';
-
 const StyledBubble = styled('div') <{
 	type: 'bright' | 'dark' | 'blueberry' | 'strawberry',
 	placement: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
@@ -43,13 +34,13 @@ const StyledBubble = styled('div') <{
 	&[h-position="left"]::before {
 		left: 0;
 		border-width: 9px 0 9px 9px;
-		border-color: transparent transparent transparent ${props => getArrowColorByTypeMap(props.type)};
+		border-color: transparent transparent transparent ${props => props.theme.colors[props.type]};
 	}
 
 	&[h-position="right"]::before {
 		right: 0;
 		border-width: 9px 9px 9px 0;
-		border-color: transparent ${props => getArrowColorByTypeMap(props.type)} transparent transparent;
+		border-color: transparent ${props => props.theme.colors[props.type]} transparent transparent;
 	}
 
 	&[v-position="top"]::before {
@@ -61,12 +52,17 @@ const StyledBubble = styled('div') <{
 	}
 `;
 
-export const ChatBubble: Component<ChatBubbleProps> = ({ type = 'blueberry', placement = 'top-left', children }) => (
+export const ChatBubble: Component<ChatBubbleProps> = ({
+	type = 'blueberry',
+	placement = 'top-left',
+	children,
+}) => (
 	<StyledBubble
 		type={type}
 		placement={placement}
 		v-position={placement.split('-')[0]}
 		h-position={placement.split('-')[1]}
+		data-testid='chat-bubble'
 	>
 		{children}
 	</StyledBubble>

@@ -43,7 +43,7 @@ const BodyContainer = styled('div')`
 `;
 
 export const GenericCard: Component<GenerircCardProps> = ({ imageSrc, title, children, actions }) => (
-	<StyledCard>
+	<StyledCard data-testid='generic-card'>
 		<Show when={imageSrc}>
 			<Image src={imageSrc} />
 		</Show>

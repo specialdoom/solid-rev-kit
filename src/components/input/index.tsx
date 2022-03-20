@@ -1,5 +1,5 @@
-import { Input } from './Input';
-import { TextArea } from './TextArea';
+import { Input } from './input';
+import { TextArea } from './text-area';
 
 export { Input, TextArea };
 

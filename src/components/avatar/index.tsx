@@ -1,5 +1,5 @@
-import { Avatar as InternalAvatar, AvatarProps } from './Avatar';
-import { DefaultAvatar, DefaultAvatarProps } from './DefaultAvatar';
+import { Avatar as InternalAvatar, AvatarProps } from './avatar';
+import { DefaultAvatar, DefaultAvatarProps } from './default-avatar';
 
 const Avatar = Object.assign(InternalAvatar, {
 	Steven: ({ round }: DefaultAvatarProps) => <DefaultAvatar type='steven' round={round} />,

@@ -1,4 +1,4 @@
-import { Alert, AlertProps } from './Alert';
+import { Alert, AlertProps, AlertType } from './alert';
 
 export { Alert };
-export type { AlertProps };
+export type { AlertProps, AlertType };

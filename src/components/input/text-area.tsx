@@ -35,6 +35,7 @@ const StyledTextArea = styled('textarea')`
 export const TextArea: Component<TextAreaProps> = ({ rows = 4, ...rest }) => (
 	<StyledTextArea
 		rows={rows}
+		data-testid='text-area'
 		{...rest}
 	/>
 );

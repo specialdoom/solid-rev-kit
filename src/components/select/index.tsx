@@ -1,3 +1,3 @@
-import { Select } from './Select';
+import { Select } from './select';
 
 export { Select };

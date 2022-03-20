@@ -9,13 +9,9 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "outDir": "types",
-    "types": ["vite/client"],
+    "types": ["vite/client", "jest"],
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "exclude": [
-    "dist",
-    "types",
-    "app.tsx"
-  ]
+  "exclude": ["dist", "types", "app.tsx"]
 }
