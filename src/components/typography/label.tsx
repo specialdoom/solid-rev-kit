@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
 import { Colors } from '../themeProvider/theme';
-import { Paragraph } from './Paragraph';
+import { Paragraph } from './paragraph';
 
 export interface LabelProps {
 	type?: keyof Colors;
