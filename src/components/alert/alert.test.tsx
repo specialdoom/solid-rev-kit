@@ -1,6 +1,6 @@
 import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
 import { screen, cleanup } from 'solid-testing-library';
-import { Alert, AlertType } from '.';
+import { Alert, AlertType } from './alert';
 
 const alertTypes: AlertType[] = ['accent', 'success', 'warning', 'error', 'dark', 'bright'];
 

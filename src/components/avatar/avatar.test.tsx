@@ -1,6 +1,6 @@
 import { renderWithRevKitThemeProvider } from '../../utils/test-utils';
 import { screen, cleanup } from 'solid-testing-library';
-import { Avatar } from '.';
+import { Avatar } from './avatar';
 
 describe('Avatar', () => {
 	afterEach(() => {
