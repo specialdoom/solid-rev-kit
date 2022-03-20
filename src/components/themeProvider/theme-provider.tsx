@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'solid-styled-components';
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from './global-style';
 import { theme } from './theme';
 
 export const RevKitTheme = (props: any) => (
