@@ -1,6 +1,6 @@
 {
   "name": "@specialdoom/solid-rev-kit",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "RevKit UI implementation for SolidJS",
   "homepage": "https://specialdoom.github.io/solid-rev-kit-docs",
   "keywords": [
@@ -34,9 +34,11 @@
   "types": "types/index.d.ts",
   "scripts": {
     "dev": "vite",
+    "prebuild": "tsc",
     "build": "vite build",
     "lint": "eslint . --ext .ts,.tsx",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
