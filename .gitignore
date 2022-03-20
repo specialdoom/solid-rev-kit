@@ -1,6 +1,4 @@
 node_modules
 dist
 types
-app.tsx
-index.html
 *.tgz

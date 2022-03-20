@@ -13,5 +13,5 @@
     "declaration": true,
     "emitDeclarationOnly": true
   },
-  "exclude": ["dist", "types", "app.tsx"]
+  "exclude": ["dist", "types", "dev.tsx"]
 }
