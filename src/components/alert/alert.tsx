@@ -1,7 +1,7 @@
 import { Component, createSignal, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
-import { Colors } from '../themeProvider/theme';
+import { Colors } from '../theme-provider/theme';
 import { Typography } from '../typography';
 
 const { Cross } = Icons;

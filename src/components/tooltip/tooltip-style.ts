@@ -1,4 +1,4 @@
-import { Colors, theme } from '../themeProvider/theme';
+import { Colors, theme } from '../theme-provider/theme';
 
 const generateTypes = () => {
 	const tooltipTypes: (keyof Colors)[] = ['bright', 'dark', 'accent', 'error', 'warning', 'success'];

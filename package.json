@@ -1,7 +1,23 @@
 {
   "name": "@specialdoom/solid-rev-kit",
   "version": "0.0.23",
-  "description": "revKit UI for solid js",
+  "description": "RevKit UI implementation for SolidJS",
+  "homepage": "https://specialdoom.github.io/solid-rev-kit-docs",
+  "keywords": [
+    "solidhack",
+    "best_ecosystem",
+    "solidjs",
+    "ui",
+    "frontend",
+    "components"
+  ],
+  "contributors": [
+    {
+      "name": "Specialdoom",
+      "email": "bledea.bogdan97@gmail.com",
+      "url": "https://github.com/specialdoom"
+    }
+  ],
   "files": [
     "dist",
     "src",

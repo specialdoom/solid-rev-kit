@@ -1,5 +1,5 @@
 import { Component } from 'solid-js';
-import { Colors } from '../themeProvider/theme';
+import { Colors } from '../theme-provider/theme';
 import { Paragraph } from './paragraph';
 
 export interface LabelProps {

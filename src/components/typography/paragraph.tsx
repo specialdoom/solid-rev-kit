@@ -1,6 +1,6 @@
 import { Component } from 'solid-js';
 import { styled } from 'solid-styled-components';
-import { Colors } from '../themeProvider/theme';
+import { Colors } from '../theme-provider/theme';
 
 export interface ParagraphProps {
 	type?: keyof Colors;
