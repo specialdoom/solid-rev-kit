@@ -1,9 +1,14 @@
-## Details
+<p align="center">
+	<a href="https://specialdoom.github.io/solid-rev-kit-docs">
+    <img height="100" src="./src/assets/images/logo.svg" />
+  </a>
+</p>
 
-revKit UI implementation for solid js.
+<h1 align="center">RevKit UI system for SolidJS
+</h1>
 
-part of solid js [hackathon](https://hack.solidjs.com/)
+Part of solid js [hackathon](https://hack.solidjs.com/)
 
 ## Resources
 
-[revKit UI Design System ](https://rev.webkul.design/kit/)
+[RevKit UI Design System ](https://rev.webkul.design/kit/)
