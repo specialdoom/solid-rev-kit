@@ -1,4 +1,4 @@
-import { Component, createSignal, Show } from 'solid-js';
+import { Component, createSignal, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { Colors } from '../theme-provider/theme';
@@ -9,13 +9,14 @@ const { Cross } = Icons;
 export type AlertType = 'accent' | 'success' | 'warning' | 'error' | 'dark' | 'bright';
 
 export interface AlertProps {
-	type?: AlertType
-	color?: keyof Colors
+	type?: AlertType;
+	color?: keyof Colors;
+	children?: JSXElement;
 }
 
-const StyledAlert = styled('div') <{
+const StyledAlert = styled('div')<{
 	type: AlertType,
-	color: keyof Colors
+	color: keyof Colors,
 }>`
 	background-color: ${(props) => props.theme.colors[props.type]};
 	box-sizing: border-box;

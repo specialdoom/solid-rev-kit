@@ -1,6 +1,6 @@
 import { Button } from '../button/button';
 import { Space } from '../space';
-import { Accessor, Component, Show } from 'solid-js';
+import { Accessor, Component, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Typography } from '../typography';
 import { Icons } from '../icons';
@@ -12,6 +12,7 @@ export interface ModalProps {
 	title: string;
 	onCancel: () => void;
 	onOk: () => void;
+	children: JSXElement;
 }
 
 const ModalWrap = styled('div')`

@@ -1,4 +1,4 @@
-import { Component, createSignal, Show } from 'solid-js';
+import { Component, createSignal, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { Colors } from '../theme-provider/theme';
@@ -9,6 +9,7 @@ export interface TagProps {
 	type?: TagType;
 	color?: keyof Colors;
 	closable?: boolean;
+	children: JSXElement;
 }
 
 const StyledTag = styled('span') <{

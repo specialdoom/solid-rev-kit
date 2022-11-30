@@ -1,4 +1,4 @@
-import { Component, createSignal, For, JSXElement, Show } from 'solid-js';
+import { Component, createSignal, For, JSX, JSXElement, Show } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Icons } from '../icons';
 import { clickOutside, useDirective } from '../../directives';
@@ -20,6 +20,7 @@ export interface FillCardProps {
 	title?: string;
 	small?: boolean;
 	actions?: CardAction[];
+	children: JSXElement;
 }
 
 const isValidUrl = (_string: string) => {

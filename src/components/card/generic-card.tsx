@@ -6,6 +6,7 @@ export interface GenerircCardProps {
 	imageSrc?: string;
 	title?: string;
 	actions?: JSXElement[];
+	children: JSXElement;
 }
 
 const StyledCard = styled('div')`

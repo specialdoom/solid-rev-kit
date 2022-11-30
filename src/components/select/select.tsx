@@ -135,7 +135,7 @@ export const Select: Component<SelectProps> = ({
 		<SelectContainer data-testid='select-container'>
 			<div
 				onClick={handleClick}
-				className='select'
+				class='select'
 				classList={{ 'selected': getOpen(), 'disabled': disabled }}
 				// @ts-ignore
 				use:clickOutside={() => { setOpen(false); onBlur?.(getSelectedOption()); }}

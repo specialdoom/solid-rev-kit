@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, JSXElement } from 'solid-js';
 import { styled } from 'solid-styled-components';
 
 export type ChatBubbleType = 'bright' | 'dark' | 'blueberry' | 'strawberry';
@@ -6,11 +6,12 @@ export type ChatBubbleType = 'bright' | 'dark' | 'blueberry' | 'strawberry';
 export interface ChatBubbleProps {
 	type?: ChatBubbleType;
 	placement?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+	children: JSXElement;
 }
 
 const StyledBubble = styled('div') <{
 	type: 'bright' | 'dark' | 'blueberry' | 'strawberry',
-	placement: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+	placement: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',
 }>`
 	position: relative;
 	height: 50px;

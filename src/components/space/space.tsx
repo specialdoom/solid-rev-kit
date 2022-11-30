@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, JSXElement } from 'solid-js';
 import { styled } from 'solid-styled-components';
 
 const StyledSpace = styled('div')`
@@ -6,4 +6,8 @@ const StyledSpace = styled('div')`
   gap: 8px;
 `;
 
-export const Space: Component = ({ children }) => <StyledSpace data-testid='space'>{children}</StyledSpace>;
+interface SpaceProps {
+  children: JSXElement;
+}
+
+export const Space: Component<SpaceProps> = ({ children }) => <StyledSpace data-testid='space'>{children}</StyledSpace>;

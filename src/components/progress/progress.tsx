@@ -42,6 +42,6 @@ const StyledProgress = styled('div') <{
 
 export const Progress: Component<ProgressProps> = ({ type = 'accent', percent, loading = false }) => (
 	<StyledProgress type={type} percent={percent} loading={loading} data-testid='progress'>
-		<div className="progress"></div>
+		<div class="progress"></div>
 	</StyledProgress>
 );

@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, JSXElement } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../theme-provider/theme';
 
@@ -6,6 +6,7 @@ export interface HeadingProps {
 	size?: 1 | 2 | 3 | 4 | 5 | 6;
 	weight?: 'normal' | 'bold';
 	type?: keyof Colors;
+	children: JSXElement;
 }
 
 const calculateFontSize = (size: number): string => {

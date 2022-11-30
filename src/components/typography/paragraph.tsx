@@ -1,4 +1,4 @@
-import { Component } from 'solid-js';
+import { Component, JSXElement } from 'solid-js';
 import { styled } from 'solid-styled-components';
 import { Colors } from '../theme-provider/theme';
 
@@ -6,6 +6,7 @@ export interface ParagraphProps {
 	type?: keyof Colors;
 	size?: 1 | 2;
 	weight?: 'normal' | 'bold';
+	children: JSXElement;
 }
 
 const calculateFontSize = (size: number): string => {
