@@ -8,9 +8,9 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'index.ts'),
       name: 'solid-rev-kit',
-      fileName: (format) => `solid-rev-kit.${format}.js`
+      formats: ["es", "cjs"],
+      fileName: (format) => format === "es" ? `solid-rev-kit.mjs` : `solid-rev-kit.cjs`
     },
-    target: 'esnext',
     rollupOptions: {
       external: ['solid-js', 'solid-styled-components', 'tippyJs'],
       output: {

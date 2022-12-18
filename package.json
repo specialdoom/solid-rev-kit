@@ -52,12 +52,16 @@
     "eslint": "^8.7.0",
     "jest": "^27.5.1",
     "solid-jest": "^0.2.0",
-    "solid-js": "^1.6.0",
-    "solid-styled-components": "^0.27.6",
     "solid-testing-library": "^0.3.0",
-    "tippy.js": "^6.3.7",
     "typescript": "^4.5.4",
     "vite": "^3.2.4",
     "vite-plugin-solid": "^2.4.0"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.6.0"
+  },
+  "dependencies": {
+    "solid-styled-components": "^0.27.6",
+    "tippy.js": "^6.3.7"
   }
 }
