@@ -24,12 +24,12 @@
     "src",
     "types"
   ],
-  "main": "./dist/solid-rev-kit.umd.js",
-  "module": "./dist/solid-rev-kit.es.js",
+  "main": "./dist/solid-rev-kit.cjs",
+  "module": "./dist/solid-rev-kit.mjs",
   "exports": {
     ".": {
-      "import": "./dist/solid-rev-kit.es.js",
-      "require": "./dist/solid-rev-kit.umd.js"
+      "import": "./dist/solid-rev-kit.mjs",
+      "require": "./dist/solid-rev-kit.cjs"
     }
   },
   "types": "types/index.d.ts",
