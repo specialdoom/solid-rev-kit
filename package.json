@@ -28,6 +28,7 @@
   "module": "./dist/solid-rev-kit.mjs",
   "exports": {
     ".": {
+      "types": "./types/index.d.ts",
       "import": "./dist/solid-rev-kit.mjs",
       "require": "./dist/solid-rev-kit.cjs"
     }
